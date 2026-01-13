@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 import asyncio
+from collections import defaultdict
 import os
 from typing import Dict, List, Optional, Set, Tuple, Any, cast
+from datetime import datetime
 
 import aiohttp
 import requests
@@ -520,6 +522,96 @@ Languages:
         self._views = total
         return total
 
+    async def recent_commits(self, limit: int = 3):
+        """
+        :return: list of last commits (repo, message, author, date)
+        """
+        events = await self.queries.query_rest(
+            f"/users/{self.username}/events/public"
+        )
+
+        commits = []
+        for event in events:
+            if event.get("type") != "PushEvent":
+                continue
+
+            repo = event.get("repo", {}).get("name")
+            for c in event.get("payload", {}).get("commits", []):
+                commits.append({
+                    "repo": repo,
+                    "message": c.get("message", "").split("\n")[0],
+                    "author": c.get("author", {}).get("name", self.username),
+                    "date": event.get("created_at"),
+                })
+                if len(commits) >= limit:
+                    return commits
+
+        return commits
+
+    async def yearly_activity_daily(self, year: int):
+        query = f"""
+        query {{
+        viewer {{
+            contributionsCollection(
+            from: "{year}-01-01T00:00:00Z",
+            to: "{year + 1}-01-01T00:00:00Z"
+            ) {{
+            contributionCalendar {{
+                weeks {{
+                contributionDays {{
+                    date
+                    contributionCount
+                }}
+                }}
+            }}
+            }}
+        }}
+        }}
+        """
+        result = await self.queries.query(query)
+
+        days = []
+        for w in result["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]:
+            for d in w["contributionDays"]:
+                days.append({
+                    "date": d["date"],
+                    "count": d["contributionCount"]
+                })
+
+        return days
+
+    async def yearly_activity_weeks(self, year: int):
+        query = f"""
+        query {{
+        viewer {{
+            contributionsCollection(
+            from: "{year}-01-01T00:00:00Z",
+            to: "{year + 1}-01-01T00:00:00Z"
+            ) {{
+            contributionCalendar {{
+                weeks {{
+                contributionDays {{
+                    contributionCount
+                }}
+                }}
+            }}
+            }}
+        }}
+        }}
+        """
+
+        result = await self.queries.query(query)
+
+        weeks = (
+            result["data"]["viewer"]
+            ["contributionsCollection"]
+            ["contributionCalendar"]["weeks"]
+        )
+
+        return [
+            sum(d["contributionCount"] for d in w["contributionDays"])
+            for w in weeks
+        ]
 
 ###############################################################################
 # Main Function

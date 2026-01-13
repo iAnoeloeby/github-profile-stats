@@ -1,0 +1,132 @@
+<svg width="450" height="320" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    svg {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    #background {
+      fill: #00000000;
+      stroke: #8B8B8B22;
+      stroke-width: 1px;
+    }
+
+    .fo-root {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.75em;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+      color: rgb(185, 28, 28);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      text-align: left;
+      list-style: none;
+      margin-bottom: 14px;
+      opacity: 0;
+      transform: translateY(200px);
+      animation: slideUp .6s ease forwards;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .repo {
+      display: flex;
+      align-items: center;
+    }
+
+    .repo .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(185, 28, 28, 0.5);
+      margin-right: 6px;
+    }
+
+    .repo .text {
+      line-height: 1;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgb(185, 28, 28);
+    }
+
+    .repo .badge {
+      margin-left: 8px;
+      line-height: 12px;
+      flex-shrink: 0;
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 10px;
+      background: rgba(9, 105, 218, 0.15);
+      color: #0969da;
+      font-weight: 500;
+    }
+
+    .commit {
+      display: inline-flex;
+      padding-left: 15px;
+      margin-top: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .commit .child-line {
+      width: 10px;
+      height: 6px;
+      border-left: 1px solid rgba(185, 28, 28, 0.35);
+      border-bottom: 1px solid rgba(185, 28, 28, 0.35);
+      margin: 2px 4px 0 0;
+    }
+
+    .commit>div {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .commit .commit-msg {
+      display: block;
+      line-height: 1.45;
+      width: 100%;
+      word-break: break-word;
+      color: rgb(156, 163, 175);
+    }
+
+    .commit .meta {
+      font-size: 10px;
+      color: rgb(148, 163, 184);
+    }
+  </style>
+
+  <rect x="2" y="2" width="446" height="316" rx="6" ry="6" id="background" />
+
+  <foreignObject x="16" y="16" width="418" height="280">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="fo-root">
+
+      <h3>Recent Commits</h3>
+
+      <ul>
+
+        {{ commits }}
+
+      </ul>
+    </div>
+  </foreignObject>
+</svg>

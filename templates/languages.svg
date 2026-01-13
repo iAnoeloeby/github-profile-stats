@@ -1,149 +1,113 @@
-<svg id="gh-dark-mode-only" width="360" height="210" xmlns="http://www.w3.org/2000/svg">
-<style>
-svg {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 14px;
-  line-height: 21px;
-}
+<svg width="380" height="210" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    svg {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+      font-size: 14px;
+      line-height: 21px;
+    }
 
-#background {
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  fill: white;
-  stroke: rgb(225, 228, 232);
-  stroke-width: 1px;
-  rx: 6px;
-  ry: 6px;
-}
+    #background {
+      fill: rgba(0, 0, 0, 0);
+      stroke: rgba(139, 139, 139, 0.15);
+      stroke-width: 1px;
+    }
 
-#gh-dark-mode-only:target #background {
-  fill: #0d1117;
-  stroke-width: 0.5px;
-}
+    foreignObject {
+      width: calc(100% - 10px - 32px);
+      height: calc(100% - 10px - 24px);
+    }
 
-foreignObject {
-  width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 24px);
-}
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.75em;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(185, 28, 28);
+      fill: rgb(185, 28, 28);
+    }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 0.75em;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(36, 41, 46);
-  fill: rgb(36, 41, 46);
-}
+    ul {
+      text-align: left;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-#gh-dark-mode-only:target h2 {
-  color: #c9d1d9;
-  fill: #c9d1d9;
-}
+    li {
+      display: inline-flex;
+      font-size: 12px;
+      margin-right: 2ch;
+      align-items: center;
+      flex-wrap: nowrap;
+      transform: translateX(-500%);
+      animation-duration: 1s;
+      animation-name: slideIn;
+      animation-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+      }
+    }
 
-li {
-  display: inline-flex;
-  font-size: 12px;
-  margin-right: 2ch;
-  align-items: center;
-  flex-wrap: nowrap;
-  transform: translateX(-500%);
-  animation: slideIn 2s ease-in-out forwards;
-}
+    div.ellipsis {
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-  }
-}
+    .octicon {
+      fill: rgb(248, 96, 105);
+      margin-right: 0.5ch;
+      vertical-align: top;
+    }
 
-div.ellipsis {
-  height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+    .progress {
+      display: flex;
+      height: 8px;
+      overflow: hidden;
+      background-color: #00000000;
+      border-radius: 6px;
+      outline: 1px solid transparent;
+      margin-bottom: 1em;
+    }
 
-.octicon {
-  fill: rgb(88, 96, 105);
-  margin-right: 0.5ch;
-  vertical-align: top;
-}
+    .lang {
+      font-weight: 600;
+      margin-right: 4px;
+      color: rgb(156, 163, 175);
+    }
 
-#gh-dark-mode-only:target .octicon {
-  color: #8b949e;
-  fill: #8b949e;
-}
+    .percent {
+      color: rgb(148, 163, 184);
+    }
+  </style>
+  <g>
+    <rect x="2" y="2" width="374" height="206" rx="6" ry="6" id="background" />
+    <g>
+      <foreignObject x="21" y="17" width="318" height="176">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
-.progress {
-  display: flex;
-  height: 8px;
-  overflow: hidden;
-  background-color: rgb(225, 228, 232);
-  border-radius: 6px;
-  outline: 1px solid transparent;
-  margin-bottom: 1em;
-}
+          <h3>Most Used Languages</h3>
 
-#gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4);
-}
+          <div>
+            <span class="progress">
+              {{ progress }}
+            </span>
+          </div>
 
-.progress-item {
-  outline: 2px solid rgb(225, 228, 232);
-  border-collapse: collapse;
-}
+          <ul>
 
-#gh-dark-mode-only:target .progress-item {
-  outline: 2px solid #393f47;
-}
+            {{ lang_list }}
 
-.lang {
-  font-weight: 600;
-  margin-right: 4px;
-  color: rgb(36, 41, 46);
-}
+          </ul>
 
-#gh-dark-mode-only:target .lang {
-  color: #c9d1d9;
-}
-
-.percent {
-  color: rgb(88, 96, 105)
-}
-
-#gh-dark-mode-only:target .percent {
-  color: #8b949e;
-}
-</style>
-<g>
-<rect x="5" y="5" id="background" />
-<g>
-<foreignObject x="21" y="17" width="318" height="176">
-<div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
-
-<h2>Languages Used (By File Size)</h2>
-
-<div>
-<span class="progress">
-{{ progress }}
-</span>
-</div>
-
-<ul>
-
-{{ lang_list }}
-
-</ul>
-
-</div>
-</foreignObject>
-</g>
-</g>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
 </svg>

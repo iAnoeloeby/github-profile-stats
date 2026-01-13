@@ -1,0 +1,132 @@
+<svg width="830" height="420" viewBox="0 0 828 420" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        #background {
+            fill: rgba(0, 0, 0, 0);
+            stroke: rgba(139, 139, 139, 0.15);
+            stroke-width: 1px;
+        }
+
+        .title {
+            fill: rgb(185, 28, 28);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .grid-week {
+            stroke: rgb(148, 163, 184);
+            stroke-opacity: 0.1;
+        }
+
+        .grid-month {
+            stroke: rgb(148, 163, 184);
+            stroke-opacity: 0.2;
+        }
+
+        .grid-h {
+            stroke: rgb(148, 163, 184);
+            stroke-opacity: 0.15;
+            stroke-dasharray: 2px;
+        }
+
+        .ct-label {
+            fill: rgb(156, 163, 175);
+            font-size: 11px;
+        }
+
+        .y-axis-labels text {
+            fill: rgb(156, 163, 175);
+            opacity: 0.7;
+            font-size: 10px;
+        }
+
+        .ct-line {
+            fill: none;
+            stroke: rgb(248, 96, 105);
+            stroke-opacity: 0.2;
+            stroke-width: 2;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            animation: dash 5s ease forwards;
+        }
+
+        .ct-point-week {
+            stroke: rgb(185, 28, 28);
+            stroke-opacity: 0.6;
+            stroke-width: 4;
+            stroke-linecap: round;
+        }
+
+        .ct-point-main {
+            stroke: rgb(185, 28, 28);
+            stroke-opacity: 1;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+
+        .ct-point-week,
+        .ct-point-main {
+            opacity: 0;
+            animation: pointFade 0.4s ease forwards;
+            animation-delay: 4.8s;
+        }
+
+        @keyframes pointFade {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <rect x="2" y="2" width="826" height="416" rx="6" ry="6" id="background" />
+    <text x="414" y="32" text-anchor="middle" class="title">
+        {{ TITLE }}
+    </text>
+
+    <!--GRIDS-->
+    <g class="grid-h-group">
+        {{ GRID_H }}
+    </g>
+
+    <!-- Y AXIS LABELS -->
+    <g class="y-axis-labels">
+        {{ Y_LABELS }}
+    </g>
+
+    <g class="grid-v-group">
+        {{ GRID_V }}
+    </g>
+
+    <!--LINE-->
+    <path class="ct-line" pathLength="1" d="{{ PATH }}" />
+    <!-- WEEK DOTS -->
+    <g>
+        {{ WEEK_DOTS }}
+    </g>
+    <!-- MAIN DOTS -->
+    <g>
+        {{ MAIN_DOTS }}
+    </g>
+    <!--MONTH LABEL-->
+    <g>
+        {{ MONTH_LABELS }}
+    </g>
+</svg>
