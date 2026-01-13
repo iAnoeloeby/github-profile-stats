@@ -46,12 +46,36 @@ jobs:
         EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
         EXCLUDE_FORKED_REPOS: true
 
-    # Commit all changed files to the repository
-    - name: Commit to the repo
+    # Snap Generated Output
+    - name: Snapshot generated artifacts
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        # Force the build to succeed, even if no files were changed
-        git commit -m 'Update generated files' || true
-        git push origin master
+        if [ ! -d generated ]; then
+          echo "❌ generated/ not found"
+          exit 1
+        fi
+
+        TMP_DIR=$(mktemp -d)
+        rsync -a generated/ "$TMP_DIR/generated/"
+        echo "TMP_DIR=$TMP_DIR" >> $GITHUB_ENV
+
+    # Publish generated to OUTPUT branch
+    - name: Publish to output branch
+      run: |
+        git fetch origin
+
+        if git show-ref --verify --quiet refs/heads/output; then
+          git checkout output
+        else
+          git checkout --orphan output
+          git rm -rf . >/dev/null 2>&1 || true
+        fi
+
+        mkdir -p generated
+        rsync -a --delete "$TMP_DIR/generated/" generated/
+
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        git add generated
+        git commit -m "chore: update generated stats" || echo "No changes"
+        git push origin output
