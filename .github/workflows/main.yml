@@ -63,8 +63,8 @@ jobs:
       run: |
         git fetch origin
 
-        if git show-ref --verify --quiet refs/heads/output; then
-          git checkout output
+        if git show-ref --verify --quiet refs/remotes/origin/output; then
+          git checkout -B output origin/output
         else
           git checkout --orphan output
           git rm -rf . >/dev/null 2>&1 || true
