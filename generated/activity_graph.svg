@@ -1,130 +1,119 @@
 <svg width="830" height="420" viewBox="0 0 828 420" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        svg {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-        }
+  <style>
+    svg {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
 
-        #background {
-            fill: rgba(0, 0, 0, 0);
-            stroke: rgba(139, 139, 139, 0.15);
-            stroke-width: 1px;
-        }
+    #background {
+      fill: rgba(0, 0, 0, 0);
+      stroke: rgba(139, 139, 139, 0.15);
+      stroke-width: 1px;
+    }
 
-        .title {
-            fill: rgb(185, 28, 28);
-            font-size: 18px;
-            font-weight: 600;
-        }
+    .title {
+      fill: rgb(185, 28, 28);
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-        .grid-week {
-            stroke: rgb(148, 163, 184);
-            stroke-opacity: 0.1;
-        }
+    .grid-week {
+      stroke: rgb(148, 163, 184);
+      stroke-opacity: 0.1;
+    }
 
-        .grid-month {
-            stroke: rgb(148, 163, 184);
-            stroke-opacity: 0.2;
-        }
+    .grid-month {
+      stroke: rgb(148, 163, 184);
+      stroke-opacity: 0.2;
+    }
 
-        .grid-h {
-            stroke: rgb(148, 163, 184);
-            stroke-opacity: 0.15;
-            stroke-dasharray: 2px;
-        }
+    .grid-h {
+      stroke: rgb(148, 163, 184);
+      stroke-opacity: 0.15;
+      stroke-dasharray: 2px;
+    }
 
-        .ct-label {
-            fill: rgb(156, 163, 175);
-            font-size: 11px;
-        }
+    .ct-label {
+      fill: rgb(156, 163, 175);
+      font-size: 11px;
+    }
 
-        .y-axis-labels text {
-            fill: rgb(156, 163, 175);
-            opacity: 0.7;
-            font-size: 10px;
-        }
+    .y-axis-labels text {
+      fill: rgb(156, 163, 175);
+      opacity: 0.7;
+      font-size: 10px;
+    }
 
-        .ct-line {
-            fill: none;
-            stroke: rgb(248, 96, 105);
-            stroke-opacity: 0.2;
-            stroke-width: 2;
-            stroke-dasharray: 1;
-            stroke-dashoffset: 1;
-            animation: dash 5s ease forwards;
-        }
+    .ct-line {
+      fill: none;
+      stroke: rgb(248, 96, 105);
+      stroke-opacity: 0.2;
+      stroke-width: 2;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: dash 5s ease forwards;
+    }
 
-        .ct-point-week {
-            stroke: rgb(185, 28, 28);
-            stroke-opacity: 0.6;
-            stroke-width: 4;
-            stroke-linecap: round;
-        }
+    .ct-point-week {
+      stroke: rgb(185, 28, 28);
+      stroke-opacity: 0.6;
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
 
-        .ct-point-main {
-            stroke: rgb(185, 28, 28);
-            stroke-opacity: 1;
-            stroke-width: 8;
-            stroke-linecap: round;
-        }
+    .ct-point-main {
+      stroke: rgb(185, 28, 28);
+      stroke-opacity: 1;
+      stroke-width: 8;
+      stroke-linecap: round;
+    }
 
-        .ct-point-week,
-        .ct-point-main {
-            opacity: 0;
-            animation: pointFade 0.4s ease forwards;
-            animation-delay: 4.8s;
-        }
+    .ct-point-week,
+    .ct-point-main {
+      opacity: 0;
+      animation: pointFade 0.4s ease forwards;
+      animation-delay: 4.8s;
+    }
 
-        @keyframes pointFade {
-            to {
-                opacity: 1;
-            }
-        }
+    @keyframes pointFade {
+      to {
+        opacity: 1;
+      }
+    }
 
-        @keyframes dash {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
-    <rect x="2" y="2" width="826" height="416" rx="6" ry="6" id="background" />
-    <text x="414" y="32" text-anchor="middle" class="title">
-        Contribution Activity (2027)
-    </text>
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <rect x="2" y="2" width="826" height="416" rx="6" ry="6" id="background" />
+  <text x="414" y="32" text-anchor="middle" class="title">
+    Contribution Activity (2027)
+  </text>
 
-    <!--GRIDS-->
-    <g class="grid-h-group">
-        <line x1="60" x2="800" y1="80.0" y2="80.0" class="grid-h"/>
+  <!--GRIDS-->
+  <g class="grid-h-group">
+    <line x1="60" x2="800" y1="80.0" y2="80.0" class="grid-h"/>
 <line x1="60" x2="800" y1="134.0" y2="134.0" class="grid-h"/>
 <line x1="60" x2="800" y1="188.0" y2="188.0" class="grid-h"/>
 <line x1="60" x2="800" y1="242.0" y2="242.0" class="grid-h"/>
 <line x1="60" x2="800" y1="296.0" y2="296.0" class="grid-h"/>
 <line x1="60" x2="800" y1="350.0" y2="350.0" class="grid-h"/>
 
-    </g>
+  </g>
 
-    <!-- Y AXIS LABELS -->
-    <g class="y-axis-labels">
-        <text x="50" y="84.0" text-anchor="end" class="ct-label">5</text>
-<text x="50" y="138.0" text-anchor="end" class="ct-label">4</text>
-<text x="50" y="192.0" text-anchor="end" class="ct-label">3</text>
-<text x="50" y="246.0" text-anchor="end" class="ct-label">2</text>
-<text x="50" y="300.0" text-anchor="end" class="ct-label">1</text>
-<text x="50" y="354.0" text-anchor="end" class="ct-label">0</text>
-
-    </g>
-
-    <g class="grid-v-group">
-        <line x1="60.0" y1="80" x2="60.0" y2="350" class="grid-month"/>
+  <g class="grid-v-group">
+    <line x1="60.0" y1="80" x2="60.0" y2="350" class="grid-month"/>
 <line x1="75.74468085106383" y1="80" x2="75.74468085106383" y2="350" class="grid-week"/>
 <line x1="91.48936170212767" y1="80" x2="91.48936170212767" y2="350" class="grid-week"/>
 <line x1="107.23404255319149" y1="80" x2="107.23404255319149" y2="350" class="grid-week"/>
@@ -173,26 +162,22 @@
 <line x1="784.2553191489362" y1="80" x2="784.2553191489362" y2="350" class="grid-week"/>
 <line x1="800.0" y1="80" x2="800.0" y2="350" class="grid-week"/>
 
-    </g>
+  </g>
 
-    <!--LINE-->
-    <path class="ct-line" pathLength="1" d="M60.0,350.0C67.87234042553192,350.0,67.87234042553192,80.0,75.74468085106383,80.0C83.61702127659575,80.0,83.61702127659575,350.0,91.48936170212767,350.0C99.36170212765958,350.0,99.36170212765958,350.0,107.23404255319149,350.0" />
-    <!-- WEEK DOTS -->
-    <g>
-        <line x1="60.0" y1="350.0" x2="60.01" y2="350.0" class="ct-point-week"/>
-<line x1="75.74468085106383" y1="80.0" x2="75.75468085106384" y2="80.0" class="ct-point-week"/>
-<line x1="91.48936170212767" y1="350.0" x2="91.49936170212767" y2="350.0" class="ct-point-week"/>
-<line x1="107.23404255319149" y1="350.0" x2="107.24404255319149" y2="350.0" class="ct-point-week"/>
+  <!-- Y AXIS LABELS -->
+  <g class="y-axis-labels">
+    <text x="50" y="84.0" text-anchor="end" class="ct-label">6</text>
+<text x="50" y="138.0" text-anchor="end" class="ct-label">4</text>
+<text x="50" y="192.0" text-anchor="end" class="ct-label">3</text>
+<text x="50" y="246.0" text-anchor="end" class="ct-label">2</text>
+<text x="50" y="300.0" text-anchor="end" class="ct-label">1</text>
+<text x="50" y="354.0" text-anchor="end" class="ct-label">0</text>
 
-    </g>
-    <!-- MAIN DOTS -->
-    <g>
-        <line x1="75.74468085106383" y1="80.0" x2="75.75468085106384" y2="80.0" class="ct-point-main"/>
+  </g>
 
-    </g>
-    <!--MONTH LABEL-->
-    <g>
-        <text x="91.48936170212767" y="372" text-anchor="middle" class="ct-label">Jan</text>
+  <!--MONTH LABEL-->
+  <g>
+    <text x="91.48936170212767" y="372" text-anchor="middle" class="ct-label">Jan</text>
 <text x="154.46808510638297" y="372" text-anchor="middle" class="ct-label">Feb</text>
 <text x="217.4468085106383" y="372" text-anchor="middle" class="ct-label">Mar</text>
 <text x="280.4255319148936" y="372" text-anchor="middle" class="ct-label">Apr</text>
@@ -205,5 +190,22 @@
 <text x="721.2765957446809" y="372" text-anchor="middle" class="ct-label">Nov</text>
 <text x="784.2553191489362" y="372" text-anchor="middle" class="ct-label">Dec</text>
 
-    </g>
+  </g>
+
+  <!--LINE-->
+  <path class="ct-line" pathLength="1" d="M60.0,350.0C67.87234042553192,350.0,67.87234042553192,80.0,75.74468085106383,80.0C83.61702127659575,80.0,83.61702127659575,350.0,91.48936170212767,350.0C99.36170212765958,350.0,99.36170212765958,350.0,107.23404255319149,350.0" />
+
+  <!-- WEEK DOTS -->
+  <g>
+    <line x1="60.0" y1="350.0" x2="60.01" y2="350.0" class="ct-point-week"/>
+<line x1="75.74468085106383" y1="80.0" x2="75.75468085106384" y2="80.0" class="ct-point-week"/>
+<line x1="91.48936170212767" y1="350.0" x2="91.49936170212767" y2="350.0" class="ct-point-week"/>
+<line x1="107.23404255319149" y1="350.0" x2="107.24404255319149" y2="350.0" class="ct-point-week"/>
+
+  </g>
+  <!-- MAIN DOTS -->
+  <g>
+    <line x1="75.74468085106383" y1="80.0" x2="75.75468085106384" y2="80.0" class="ct-point-main"/>
+
+  </g>
 </svg>

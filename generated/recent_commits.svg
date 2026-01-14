@@ -1,7 +1,13 @@
+<!--
+last_commits:
+- iAnoeloeby/github-profile-stats@17264f2
+- iAnoeloeby/github-profile-stats@5c62d27
+- iAnoeloeby/github-profile-stats@a91c05d
+-->
 <svg width="450" height="320" xmlns="http://www.w3.org/2000/svg">
   <style>
     svg {
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
       font-size: 12px;
       line-height: 12px;
     }
@@ -125,8 +131,60 @@
       <ul>
 
         
+            <li style="animation-delay:0ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/github-profile-stats</span>
+                    <span class="badge">latest</span>
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">chore: stabilize SVG generation with state-based recent commits</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 14 Jan 2026, 04:37 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <li style="animation-delay:150ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/github-profile-stats</span>
+                    
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">chore(ci): fix output branch publishing to avoid non-fast-forward error</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 13 Jan 2026, 14:14 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <li style="animation-delay:300ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/github-profile-stats</span>
+                    
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">chore: add generated result scheme to output branch</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 13 Jan 2026, 13:58 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
 
       </ul>
+
     </div>
   </foreignObject>
 </svg>
