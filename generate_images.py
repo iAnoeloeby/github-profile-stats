@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-import asyncio
-from collections import defaultdict
-from datetime import datetime
 import os
 import re
-
+import logging
+import asyncio
 import aiohttp
+from datetime import datetime
+from collections import defaultdict
 
 from github_stats import Stats
 
@@ -15,6 +15,13 @@ from github_stats import Stats
 # Helper Functions
 ################################################################################
 
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 def generate_output_folder() -> None:
     """
@@ -94,6 +101,51 @@ def map_y(val, max_val):
     return BOTTOM - (val / max_val) * (BOTTOM - TOP)
 
 
+def extract_last_commits_from_svg(path="generated/recent_commits.svg"):
+    """
+    Extract stored commit fingerprints from SVG comment.
+    The SVG stores internal state in the following format:
+    <!--
+    last_commits:
+    - owner/repo@sha
+    - owner/repo@sha
+    -->
+    Safe behavior:
+    - Returns empty list if file does not exist
+    - Returns empty list if header is missing or empty
+    :param path: Path to generated recent_commits.svg
+    :return: List of commit fingerprints (owner/repo@sha)
+    """
+    if not os.path.exists(path):
+        return []
+
+    with open(path, "r", encoding="utf-8") as f:
+        svg = f.read()
+
+    match = re.search(r"last_commits:\s*(.*?)-->", svg, re.S)
+    if not match:
+        return []
+
+    commits = []
+    for line in match.group(1).splitlines():
+        line = line.strip()
+        if line.startswith("- "):
+            commits.append(line[2:].strip())
+
+    return commits
+
+
+def format_date(iso: str) -> str:
+    """
+    Format ISO 8601 UTC timestamp into a stable, human-readable format.
+    :param iso: ISO timestamp string from GitHub API
+    :return: Formatted date string
+    """
+    dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    return dt.strftime("%d %b %Y, %H:%M UTC")
+
+
+
 ################################################################################
 # Individual Image Generation Functions
 ################################################################################
@@ -104,6 +156,7 @@ async def generate_overview(s: Stats) -> None:
     Generate an SVG badge with summary statistics
     :param s: Represents user's GitHub statistics
     """
+    logger.info("overview >>: generating")
     with open("templates/overview.svg", "r") as f:
         output = f.read()
 
@@ -119,6 +172,7 @@ async def generate_overview(s: Stats) -> None:
     generate_output_folder()
     with open("generated/overview.svg", "w") as f:
         f.write(output)
+    logger.info("overview >>: done")
 
 
 async def generate_languages(s: Stats) -> None:
@@ -126,6 +180,7 @@ async def generate_languages(s: Stats) -> None:
     Generate an SVG badge with summary languages used
     :param s: Represents user's GitHub statistics
     """
+    logger.info("languages >>: generating")
     with open("templates/languages.svg", "r") as f:
         output = f.read()
 
@@ -159,41 +214,86 @@ async def generate_languages(s: Stats) -> None:
     generate_output_folder()
     with open("generated/languages.svg", "w") as f:
         f.write(output)
+    logger.info("languages >>: done")
 
 
 async def generate_recent_commits(s: Stats) -> None:
+    """
+    Generate the recent commits SVG with smart, state-based updates.
+
+    Behavior:
+    - Reads previous commit fingerprints from existing SVG
+    - Uses Events API as a cheap trigger signal
+    - Fetches commit details ONLY when changes are detected
+    - Preserves SVG if no update is required
+
+    State handling:
+    1. First run + no commits      → only empty message
+    2. No change detected          → skip generation
+    3. New commits detected        → regenerate SVG
+    """
+    logger.info("recent_commits >>: generating")
+    old_fps = extract_last_commits_from_svg()
+    new_fps = await s.recent_commit_fingerprints(3)
+
     with open("templates/recent_commits.svg", "r") as f:
-        output = f.read()
+        template = f.read()
 
-    commits = await s.recent_commits(3)
+    if not old_fps and not new_fps:
+        logger.info("recent_commits >>: first run, empty state")
 
-    delay_step = 150
+        header = "<!--\nlast_commits:\n-->\n"
+        commits_html = """
+            <text x="50%" y="50%" text-anchor="middle"
+                dominant-baseline="middle" class="text">
+            No recent commits yet. developer feels lazy now
+            </text>
+            """
+
+        output = header + re.sub(r"{{ commits }}", commits_html, template)
+
+        generate_output_folder()
+        with open("generated/recent_commits.svg", "w") as f:
+            f.write(output)
+        return
+
+    if old_fps and new_fps == old_fps:
+        logger.info("recent_commits >>: no change, skipped")
+        return
+
+    logger.info("recent_commits >>: updated")
+
+    commits = await s.fetch_commit_details(new_fps)
+
     items = ""
-
     for i, c in enumerate(commits):
-        delay = i * delay_step
-        badge = "<span class=\"badge\">latest</span>" if i == 0 else ""
-
+        delay = i * 150
+        badge = '<span class="badge">latest</span>' if i == 0 else ""
         items += f"""
             <li style="animation-delay:{delay}ms">
-            <div class="repo">
-                <span class="dot"></span>
-                <span class="text">{c["repo"]}</span>
-                {badge}
-            </div>
-            <div class="commit">
-                <span class="child-line"></span>
-                <div>
-                <span class="commit-msg">{c["message"]}</span>
-                <span class="meta">
-                    by {c["author"]} &#8226; {c["date"]}
-                </span>
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">{c["repo"]}</span>
+                    {badge}
                 </div>
-            </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">{c["message"]}</span>
+                        <span class="meta">
+                            by {c["author"]} &#8226; {format_date(c["date"])}
+                        </span>
+                    </div>
+                </div>
             </li>
             """
 
-    output = re.sub(r"{{ commits }}", items, output)
+    header = "<!--\nlast_commits:\n"
+    for fp in new_fps:
+        header += f"- {fp}\n"
+    header += "-->\n"
+
+    output = header + re.sub(r"{{ commits }}", items, template)
 
     generate_output_folder()
     with open("generated/recent_commits.svg", "w") as f:
@@ -205,6 +305,7 @@ async def generate_activity_graph(s: Stats) -> None:
     Generate an SVG graph visualizing yearly GitHub contribution activity
     :param s: Represents user's GitHub statistics
     """
+    logger.info("activity_graph >>: generating")
     with open("templates/activity_graph.svg") as f:
         svg = f.read()
 
@@ -324,6 +425,8 @@ async def generate_activity_graph(s: Stats) -> None:
     generate_output_folder()
     with open("generated/activity_graph.svg", "w") as f:
         f.write(svg)
+    logger.info("activity_graph >>: done")
+
 
 
 ################################################################################
@@ -335,9 +438,11 @@ async def main() -> None:
     """
     Generate all badges
     """
+    logger.info("job: started")
+
     access_token = os.getenv("ACCESS_TOKEN")
     if not access_token:
-        # access_token = os.getenv("GITHUB_TOKEN")
+        access_token = os.getenv("GITHUB_TOKEN")
         raise Exception("A personal access token is required to proceed!")
     user = os.getenv("GITHUB_ACTOR")
     if user is None:
@@ -368,9 +473,11 @@ async def main() -> None:
         await asyncio.gather(
             generate_languages(s),
             generate_overview(s),
-            generate_recent_commits(s),
             generate_activity_graph(s),
+            generate_recent_commits(s),
         )
+    
+    logger.info("job: finished")
 
 
 if __name__ == "__main__":

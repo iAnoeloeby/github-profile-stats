@@ -36,6 +36,13 @@ jobs:
         python3 -m pip install --upgrade pip setuptools wheel
         python3 -m pip install -r requirements.txt
 
+    # Pull lightweight state to detect commit changes from output branch
+    - name: Pull previous generated state (output branch)
+      run: |
+        git fetch origin output || true
+        mkdir -p generated
+        git show origin/output:generated/recent_commits.svg > generated/recent_commits.svg || true
+
     # Generate all statistics images
     - name: Generate images
       run: |

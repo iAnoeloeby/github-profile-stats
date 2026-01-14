@@ -522,33 +522,11 @@ Languages:
         self._views = total
         return total
 
-    async def recent_commits(self, limit: int = 3):
-        """
-        :return: list of last commits (repo, message, author, date)
-        """
-        events = await self.queries.query_rest(
-            f"/users/{self.username}/events/public"
-        )
-
-        commits = []
-        for event in events:
-            if event.get("type") != "PushEvent":
-                continue
-
-            repo = event.get("repo", {}).get("name")
-            for c in event.get("payload", {}).get("commits", []):
-                commits.append({
-                    "repo": repo,
-                    "message": c.get("message", "").split("\n")[0],
-                    "author": c.get("author", {}).get("name", self.username),
-                    "date": event.get("created_at"),
-                })
-                if len(commits) >= limit:
-                    return commits
-
-        return commits
-
     async def yearly_activity_daily(self, year: int):
+        """
+        Retrieve daily contribution counts for a given year.
+        Used for activity graph generation.
+        """
         query = f"""
         query {{
         viewer {{
@@ -580,38 +558,62 @@ Languages:
 
         return days
 
-    async def yearly_activity_weeks(self, year: int):
-        query = f"""
-        query {{
-        viewer {{
-            contributionsCollection(
-            from: "{year}-01-01T00:00:00Z",
-            to: "{year + 1}-01-01T00:00:00Z"
-            ) {{
-            contributionCalendar {{
-                weeks {{
-                contributionDays {{
-                    contributionCount
-                }}
-                }}
-            }}
-            }}
-        }}
-        }}
+    async def recent_commit_fingerprints(self, limit: int = 3):
         """
-
-        result = await self.queries.query(query)
-
-        weeks = (
-            result["data"]["viewer"]
-            ["contributionsCollection"]
-            ["contributionCalendar"]["weeks"]
+        Lightweight check using Events API.
+        Returns latest commit fingerprints in format: owner/repo@short_sha.
+        """
+        events = await self.queries.query_rest(
+            f"/users/{self.username}/events"
         )
 
-        return [
-            sum(d["contributionCount"] for d in w["contributionDays"])
-            for w in weeks
-        ]
+        fingerprints = []
+
+        for event in events:
+            if event.get("type") != "PushEvent":
+                continue
+
+            repo = event["repo"]["name"]
+            sha = event["payload"]["head"][:7]
+            fp = f"{repo}@{sha}"
+
+            if fp not in fingerprints:
+                fingerprints.append(fp)
+
+            if len(fingerprints) >= limit:
+                break
+
+        return fingerprints
+
+    async def fetch_commit_details(self, fingerprints):
+        """
+        Fetch detailed commit information from Commit API
+        based on provided commit fingerprints.
+        """
+        commits = []
+
+        for fp in fingerprints:
+            repo_full, short_sha = fp.rsplit("@", 1)
+            owner, repo = repo_full.split("/")
+
+            data = await self.queries.query_rest(
+                f"/repos/{owner}/{repo}/commits/{short_sha}"
+            )
+
+            if not data or "commit" not in data:
+                continue
+
+            commits.append({
+                "repo": f"{owner}/{repo}",
+                "message": data["commit"]["message"].split("\n")[0],
+                "author": data["commit"]["author"]["name"],
+                "date": data["commit"]["author"]["date"],
+                "sha": short_sha,
+            })
+
+        return commits
+
+
 
 ###############################################################################
 # Main Function
