@@ -22,11 +22,11 @@ jobs:
     # Check out repository under $GITHUB_WORKSPACE, so the job can access it
     - uses: actions/checkout@v3
 
-    # Run using Python 3.8 for consistency and aiohttp
-    - name: Set up Python 3.8
+    # Run using Python 3.10 for consistency and aiohttp
+    - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.10'
         architecture: 'x64'
         cache: 'pip'
 
@@ -36,12 +36,12 @@ jobs:
         python3 -m pip install --upgrade pip setuptools wheel
         python3 -m pip install -r requirements.txt
 
-    # Pull lightweight state to detect commit changes from output branch
-    - name: Pull previous generated state (output branch)
+    # Pull cache to detect previous state from output branch
+    - name: Pull cache from output branch
       run: |
+        mkdir -p .cache-runtime
         git fetch origin output || true
-        mkdir -p generated
-        git show origin/output:generated/recent_commits.svg > generated/recent_commits.svg || true
+        git show origin/output:cache/stats.json > .cache-runtime/stats.json || true
 
     # Generate all statistics images
     - name: Generate images
@@ -80,9 +80,12 @@ jobs:
         mkdir -p generated
         rsync -a --delete "$TMP_DIR/generated/" generated/
 
+        mkdir -p cache
+        mv .cache-runtime/stats.json cache/stats.json 2>/dev/null || true
+
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-        git add generated
-        git commit -m "chore: update generated stats" || echo "No changes"
+        git add generated cache
+        git commit -m "actions: update generated stats" || echo "No changes"
         git push origin output

@@ -1,10 +1,19 @@
 #!/usr/bin/python3
 
 import asyncio
-from collections import defaultdict
 import os
+import calendar
+import math
 from typing import Dict, List, Optional, Set, Tuple, Any, cast
 from datetime import datetime
+from cache_utils import (
+    load_cache,
+    save_cache,
+    get_lines_changed,
+    set_lines_changed,
+    get_recent_commits,
+    set_recent_commits,
+)
 
 import aiohttp
 import requests
@@ -126,78 +135,78 @@ class Queries(object):
         :return: GraphQL query with overview of user repositories
         """
         return f"""{{
-  viewer {{
-    login,
-    name,
-    repositories(
-        first: 100,
-        orderBy: {{
-            field: UPDATED_AT,
-            direction: DESC
-        }},
-        isFork: false,
-        after: {"null" if owned_cursor is None else '"'+ owned_cursor +'"'}
-    ) {{
-      pageInfo {{
-        hasNextPage
-        endCursor
-      }}
-      nodes {{
-        nameWithOwner
-        stargazers {{
-          totalCount
-        }}
-        forkCount
-        languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
-          edges {{
-            size
-            node {{
-              name
-              color
+            viewer {{
+                login,
+                name,
+                repositories(
+                    first: 100,
+                    orderBy: {{
+                        field: UPDATED_AT,
+                        direction: DESC
+                    }},
+                    isFork: false,
+                    after: {"null" if owned_cursor is None else '"' + owned_cursor + '"'}
+                ) {{
+                pageInfo {{
+                    hasNextPage
+                    endCursor
+                }}
+                nodes {{
+                    nameWithOwner
+                    stargazers {{
+                    totalCount
+                    }}
+                    forkCount
+                    languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
+                    edges {{
+                        size
+                        node {{
+                        name
+                        color
+                        }}
+                    }}
+                    }}
+                }}
+                }}
+                repositoriesContributedTo(
+                    first: 100,
+                    includeUserRepositories: false,
+                    orderBy: {{
+                        field: UPDATED_AT,
+                        direction: DESC
+                    }},
+                    contributionTypes: [
+                        COMMIT,
+                        PULL_REQUEST,
+                        REPOSITORY,
+                        PULL_REQUEST_REVIEW
+                    ]
+                    after: {"null" if contrib_cursor is None else '"' + contrib_cursor + '"'}
+                ) {{
+                pageInfo {{
+                    hasNextPage
+                    endCursor
+                }}
+                nodes {{
+                    nameWithOwner
+                    stargazers {{
+                    totalCount
+                    }}
+                    forkCount
+                    languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
+                    edges {{
+                        size
+                        node {{
+                        name
+                        color
+                        }}
+                    }}
+                    }}
+                }}
+                }}
             }}
-          }}
-        }}
-      }}
-    }}
-    repositoriesContributedTo(
-        first: 100,
-        includeUserRepositories: false,
-        orderBy: {{
-            field: UPDATED_AT,
-            direction: DESC
-        }},
-        contributionTypes: [
-            COMMIT,
-            PULL_REQUEST,
-            REPOSITORY,
-            PULL_REQUEST_REVIEW
-        ]
-        after: {"null" if contrib_cursor is None else '"'+ contrib_cursor +'"'}
-    ) {{
-      pageInfo {{
-        hasNextPage
-        endCursor
-      }}
-      nodes {{
-        nameWithOwner
-        stargazers {{
-          totalCount
-        }}
-        forkCount
-        languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
-          edges {{
-            size
-            node {{
-              name
-              color
             }}
-          }}
-        }}
-      }}
-    }}
-  }}
-}}
-"""
+        """
 
     @staticmethod
     def contrib_years() -> str:
@@ -276,6 +285,7 @@ class Stats(object):
         self._lines_changed: Optional[Tuple[int, int]] = None
         self._views: Optional[int] = None
 
+
     async def to_str(self) -> str:
         """
         :return: summary of all available statistics
@@ -286,16 +296,18 @@ class Stats(object):
         )
         lines_changed = await self.lines_changed
         return f"""Name: {await self.name}
-Stargazers: {await self.stargazers:,}
-Forks: {await self.forks:,}
-All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {len(await self.repos)}
-Lines of code added: {lines_changed[0]:,}
-Lines of code deleted: {lines_changed[1]:,}
-Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
-Project page views: {await self.views:,}
-Languages:
-  - {formatted_languages}"""
+            Stargazers: {await self.stargazers:,}
+            Forks: {await self.forks:,}
+            All-time contributions: {await self.total_contributions:,}
+            Repositories with contributions: {len(await self.repos)}
+            Lines of code added: {lines_changed[0]:,}
+            Lines of code deleted: {lines_changed[1]:,}
+            Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
+            Project page views: {await self.views:,}
+            Languages:
+            - {formatted_languages}
+            """
+
 
     async def get_stats(self) -> None:
         """
@@ -382,6 +394,7 @@ Languages:
         for k, v in self._languages.items():
             v["prop"] = 100 * (v.get("size", 0) / langs_total)
 
+
     @property
     async def name(self) -> str:
         """
@@ -392,6 +405,7 @@ Languages:
         await self.get_stats()
         assert self._name is not None
         return self._name
+
 
     @property
     async def stargazers(self) -> int:
@@ -404,6 +418,7 @@ Languages:
         assert self._stargazers is not None
         return self._stargazers
 
+
     @property
     async def forks(self) -> int:
         """
@@ -414,6 +429,7 @@ Languages:
         await self.get_stats()
         assert self._forks is not None
         return self._forks
+
 
     @property
     async def languages(self) -> Dict:
@@ -426,6 +442,7 @@ Languages:
         assert self._languages is not None
         return self._languages
 
+
     @property
     async def languages_proportional(self) -> Dict:
         """
@@ -437,6 +454,7 @@ Languages:
 
         return {k: v.get("prop", 0) for (k, v) in self._languages.items()}
 
+
     @property
     async def repos(self) -> Set[str]:
         """
@@ -447,6 +465,7 @@ Languages:
         await self.get_stats()
         assert self._repos is not None
         return self._repos
+
 
     @property
     async def total_contributions(self) -> int:
@@ -476,33 +495,60 @@ Languages:
             )
         return cast(int, self._total_contributions)
 
+
     @property
-    async def lines_changed(self) -> Tuple[int, int]:
+    async def lines_changed(self):
         """
-        :return: count of total lines added, removed, or modified by the user
+        :return: total lines added and deleted by the user.
+        - First run: full scan.
+        - Next runs: incremental update.
         """
-        if self._lines_changed is not None:
-            return self._lines_changed
-        additions = 0
-        deletions = 0
-        for repo in await self.repos:
-            r = await self.queries.query_rest(f"/repos/{repo}/stats/contributors")
-            for author_obj in r:
-                # Handle malformed response from the API by skipping this repo
-                if not isinstance(author_obj, dict) or not isinstance(
-                    author_obj.get("author", {}), dict
-                ):
-                    continue
-                author = author_obj.get("author", {}).get("login", "")
-                if author != self.username:
+        cache = load_cache()
+        lc = get_lines_changed(cache)
+
+        if not lc:
+            additions = 0
+            deletions = 0
+
+            for repo in await self.repos:
+                r = await self.queries.query_rest(f"/repos/{repo}/stats/contributors")
+                if not isinstance(r, list):
                     continue
 
-                for week in author_obj.get("weeks", []):
-                    additions += week.get("a", 0)
-                    deletions += week.get("d", 0)
+                for author_obj in r:
+                    author = author_obj.get("author", {}).get("login")
+                    if author != self.username:
+                        continue
+                    for week in author_obj.get("weeks", []):
+                        additions += week.get("a", 0)
+                        deletions += week.get("d", 0)
+
+            now = datetime.utcnow().isoformat() + "Z"
+            cache = set_lines_changed(cache, additions, deletions, now)
+            save_cache(cache)
+
+            self._lines_changed = (additions, deletions)
+            return self._lines_changed
+
+        additions = lc["additions"]
+        deletions = lc["deletions"]
+        since = lc["last_commit_date"]
+
+        delta_add, delta_del, newest = await self.lines_changed_since(since)
+
+        if delta_add == 0 and delta_del == 0:
+            self._lines_changed = (additions, deletions)
+            return self._lines_changed
+
+        additions += delta_add
+        deletions += delta_del
+
+        cache = set_lines_changed(cache, additions, deletions, newest)
+        save_cache(cache)
 
         self._lines_changed = (additions, deletions)
         return self._lines_changed
+
 
     @property
     async def views(self) -> int:
@@ -521,6 +567,101 @@ Languages:
 
         self._views = total
         return total
+
+
+    async def lines_changed_since(self, since_iso: str):
+        """
+        Retrieve incremental lines added and deleted since a given timestamp.
+        Used for incremental lines_changed calculation.
+        """
+        additions = 0
+        deletions = 0
+        newest_commit_date = since_iso
+
+        since_dt = datetime.fromisoformat(since_iso.replace("Z", "+00:00"))
+
+        events = await self.queries.query_rest(
+            f"/users/{self.username}/events"
+        )
+
+        for event in events:
+            if event.get("type") != "PushEvent":
+                continue
+
+            for commit in event["payload"].get("commits", []):
+                repo = event["repo"]["name"]
+                sha = commit["sha"]
+
+                data = await self.queries.query_rest(
+                    f"/repos/{repo}/commits/{sha}"
+                )
+                if not data or "commit" not in data:
+                    continue
+
+                commit_iso = data["commit"]["author"]["date"]
+                commit_dt = datetime.fromisoformat(
+                    commit_iso.replace("Z", "+00:00"))
+
+                if commit_dt <= since_dt:
+                    continue
+
+                stats = data.get("stats")
+                if not stats:
+                    continue
+
+                additions += stats.get("additions", 0)
+                deletions += stats.get("deletions", 0)
+
+                if commit_iso > newest_commit_date:
+                    newest_commit_date = commit_iso
+
+        return additions, deletions, newest_commit_date
+
+    async def yearly_activity_month_slots(self, year: int):
+        """
+        :Returns fixed 48 slots (12 months x 4 slots).
+        - summed contributions as value
+        - Future as none
+        """
+        days = await self.yearly_activity_daily(year)
+        today = datetime.utcnow().date()
+
+        by_month = {m: [] for m in range(1, 13)}
+        for d in days:
+            d_date = datetime.fromisoformat(d["date"]).date()
+            by_month[d_date.month].append({
+                "day": d_date.day,
+                "count": d["count"],
+                "is_future": d_date > today,
+            })
+
+        slots = []
+
+        for month in range(1, 13):
+            days_in_month = calendar.monthrange(year, month)[1]
+            slot_size = math.ceil(days_in_month / 4)
+
+            month_slots = [0, 0, 0, 0]
+            future_mask = [True, True, True, True]
+
+            for item in by_month[month]:
+                slot_idx = min((item["day"] - 1) // slot_size, 3)
+
+                if item["is_future"]:
+                    continue
+
+                future_mask[slot_idx] = False
+                month_slots[slot_idx] += item["count"]
+
+            # convert future-only slots → None
+            for i in range(4):
+                if future_mask[i]:
+                    month_slots[i] = None
+
+            slots.extend(month_slots)
+
+        assert len(slots) == 48
+        return slots
 
     async def yearly_activity_daily(self, year: int):
         """
@@ -546,17 +687,52 @@ Languages:
         }}
         }}
         """
+
+        # TODO: Cache per-year daily activity to avoid repeated GraphQL queries
+        #       when regenerating activity graphs.
         result = await self.queries.query(query)
 
         days = []
         for w in result["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]:
             for d in w["contributionDays"]:
-                days.append({
-                    "date": d["date"],
-                    "count": d["contributionCount"]
-                })
+                d_year = datetime.fromisoformat(d["date"]).year
+                if d_year == year:
+                    days.append({
+                        "date": d["date"],
+                        "count": d["contributionCount"]
+                    })
 
         return days
+
+    async def recent_commits(self, limit: int = 3):
+        """
+        :return: list of recent commit objects.
+        - First run: fetch & cache
+        - Next runs: incremental via fingerprints
+        """
+        cache = load_cache()
+        cached = get_recent_commits(cache)
+        old_fps = cached["fingerprints"] if cached else []
+
+        new_fps = await self.recent_commit_fingerprints(limit)
+
+        if not old_fps and not new_fps:
+            cache = set_recent_commits(cache, [])
+            save_cache(cache)
+            return []
+
+        # TODO: Fingerprints are heuristic-based; force-push or rebase
+        #       may invalidate cached commit ordering.
+        if old_fps and new_fps == old_fps:
+            return await self.fetch_commit_details(old_fps)
+
+        commits = await self.fetch_commit_details(new_fps)
+
+        cache = set_recent_commits(cache, new_fps)
+        save_cache(cache)
+
+        return commits
+
 
     async def recent_commit_fingerprints(self, limit: int = 3):
         """
@@ -574,7 +750,13 @@ Languages:
                 continue
 
             repo = event["repo"]["name"]
-            sha = event["payload"]["head"][:7]
+
+            # TODO: Only the head commit of a PushEvent is used;
+            #       intermediate commits in the same push are ignored.
+            head = event["payload"].get("head")
+            if not head:
+                continue
+            sha = head[:7]
             fp = f"{repo}@{sha}"
 
             if fp not in fingerprints:
@@ -585,6 +767,7 @@ Languages:
 
         return fingerprints
 
+
     async def fetch_commit_details(self, fingerprints):
         """
         Fetch detailed commit information from Commit API
@@ -592,6 +775,8 @@ Languages:
         """
         commits = []
 
+        # TODO: Performs one REST API call per commit (N+1);
+        #       may hit rate limits for larger limits.
         for fp in fingerprints:
             repo_full, short_sha = fp.rsplit("@", 1)
             owner, repo = repo_full.split("/")

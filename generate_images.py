@@ -31,44 +31,6 @@ def generate_output_folder() -> None:
         os.mkdir("generated")
 
 
-def group_by_month(days):
-    """
-    for activity graph function
-    Group daily contribution data by month
-    :param days: List of daily contribution records (date, count)
-    :return: Dictionary mapping month number to list of contribution counts
-    """
-    months = defaultdict(list)
-    for d in days:
-        m = datetime.fromisoformat(d["date"]).month
-        months[m].append(d["count"])
-    return months
-
-
-def compress_month(values, slots=4):
-    """
-    for activity graph function
-    Compress a list of daily values into a fixed number of slots
-    :param values: List of contribution counts for a month
-    :param slots: Number of slots to compress into (default: 4)
-    :return: List of aggregated values with fixed length
-    """
-    if not values:
-        return [None] * slots
-
-    size = len(values)
-    step = size / slots
-    buckets = []
-
-    for i in range(slots):
-        start = int(i * step)
-        end = int((i + 1) * step)
-        chunk = values[start:end]
-        buckets.append(sum(chunk) if chunk else None)
-
-    return buckets
-
-
 def generate_bezier_path(points):
     """
     for activity graph function
@@ -99,40 +61,6 @@ def map_y(val, max_val):
     TOP = 80
     BOTTOM = 350
     return BOTTOM - (val / max_val) * (BOTTOM - TOP)
-
-
-def extract_last_commits_from_svg(path="generated/recent_commits.svg"):
-    """
-    Extract stored commit fingerprints from SVG comment.
-    The SVG stores internal state in the following format:
-    <!--
-    last_commits:
-    - owner/repo@sha
-    - owner/repo@sha
-    -->
-    Safe behavior:
-    - Returns empty list if file does not exist
-    - Returns empty list if header is missing or empty
-    :param path: Path to generated recent_commits.svg
-    :return: List of commit fingerprints (owner/repo@sha)
-    """
-    if not os.path.exists(path):
-        return []
-
-    with open(path, "r", encoding="utf-8") as f:
-        svg = f.read()
-
-    match = re.search(r"last_commits:\s*(.*?)-->", svg, re.S)
-    if not match:
-        return []
-
-    commits = []
-    for line in match.group(1).splitlines():
-        line = line.strip()
-        if line.startswith("- "):
-            commits.append(line[2:].strip())
-
-    return commits
 
 
 def format_date(iso: str) -> str:
@@ -219,57 +147,33 @@ async def generate_languages(s: Stats) -> None:
 
 async def generate_recent_commits(s: Stats) -> None:
     """
-    Generate the recent commits SVG with smart, state-based updates.
-
-    Behavior:
-    - Reads previous commit fingerprints from existing SVG
-    - Uses Events API as a cheap trigger signal
-    - Fetches commit details ONLY when changes are detected
-    - Preserves SVG if no update is required
-
-    State handling:
-    1. First run + no commits      → only empty message
-    2. No change detected          → skip generation
-    3. New commits detected        → regenerate SVG
+    Generate recent commits SVG using JSON-based cache state.
     """
     logger.info("recent_commits >>: generating")
-    old_fps = extract_last_commits_from_svg()
-    new_fps = await s.recent_commit_fingerprints(3)
+    commits = await s.recent_commits(3)
 
     with open("templates/recent_commits.svg", "r") as f:
         template = f.read()
 
-    if not old_fps and not new_fps:
+    if not commits:
         logger.info("recent_commits >>: first run, empty state")
 
-        header = "<!--\nlast_commits:\n-->\n"
-        commits_html = """
-            <text x="50%" y="50%" text-anchor="middle"
-                dominant-baseline="middle" class="text">
-            No recent commits yet. developer feels lazy now
-            </text>
+        output = re.sub(
+            r"{{ commits }}",
             """
+            <text x="50%" y="50%" text-anchor="middle" class="text">
+            No recent commits yet.
+            </text>
+            """,
+            template,
+        )
 
-        output = header + re.sub(r"{{ commits }}", commits_html, template)
-
-        generate_output_folder()
-        with open("generated/recent_commits.svg", "w") as f:
-            f.write(output)
-        return
-
-    if old_fps and new_fps == old_fps:
-        logger.info("recent_commits >>: no change, skipped")
-        return
-
-    logger.info("recent_commits >>: updated")
-
-    commits = await s.fetch_commit_details(new_fps)
-
-    items = ""
-    for i, c in enumerate(commits):
-        delay = i * 150
-        badge = '<span class="badge">latest</span>' if i == 0 else ""
-        items += f"""
+    else:
+        items = ""
+        for i, c in enumerate(commits):
+            delay = i * 150
+            badge = '<span class="badge">latest</span>' if i == 0 else ""
+            items += f"""
             <li style="animation-delay:{delay}ms">
                 <div class="repo">
                     <span class="dot"></span>
@@ -288,16 +192,16 @@ async def generate_recent_commits(s: Stats) -> None:
             </li>
             """
 
-    header = "<!--\nlast_commits:\n"
-    for fp in new_fps:
-        header += f"- {fp}\n"
-    header += "-->\n"
+        output = re.sub(r"{{ commits }}", items, template)
+        logger.info("recent_commits >>: updated")
 
-    output = header + re.sub(r"{{ commits }}", items, template)
 
     generate_output_folder()
     with open("generated/recent_commits.svg", "w") as f:
         f.write(output)
+
+    logger.info("recent_commits >>: done")
+
 
 
 async def generate_activity_graph(s: Stats) -> None:
@@ -309,29 +213,12 @@ async def generate_activity_graph(s: Stats) -> None:
     with open("templates/activity_graph.svg") as f:
         svg = f.read()
 
-    days = await s.yearly_activity_daily(datetime.now().year)
-    has_data = bool(days)
-    months_data = group_by_month(days) if has_data else {}
-
-    if has_data:
-        last_date = max(datetime.fromisoformat(d["date"]) for d in days)
-        year = last_date.year
-        last_month = last_date.month
-    else:
-        year = datetime.now().year
-        last_month = 0
-
-    values = []
-    for m in range(1, 13):
-        if m > last_month:
-            values.extend([None] * 4)
-        else:
-            values.extend(compress_month(months_data.get(m)))
-
+    year = datetime.now().year
+    values = await s.yearly_activity_month_slots(year)
     assert len(values) == 48
 
-    X_START = 60
-    X_END = 800
+    X_START = 40
+    X_END = 780
     TOP = 80
     BOTTOM = 350
     GRID_COUNT = 5
@@ -339,6 +226,13 @@ async def generate_activity_graph(s: Stats) -> None:
     STEP = (X_END - X_START) / 47
     valid_values = [v for v in values if v is not None]
     max_val = max(valid_values) if valid_values else 1
+
+    data_indices = [i for i, v in enumerate(values) if v is not None]
+
+    if not data_indices:
+        last_data_index = -1
+    else:
+        last_data_index = max(data_indices)
 
     # ===== Horizontal grid =====
     grid_h = ""
@@ -362,7 +256,7 @@ async def generate_activity_graph(s: Stats) -> None:
     # ===== Path =====
     points = [
         (X_START + i * STEP, map_y(v, max_val))
-        for i, v in enumerate(values)
+        for i, v in enumerate(values[: last_data_index + 1])
         if v is not None
     ]
 
@@ -372,7 +266,7 @@ async def generate_activity_graph(s: Stats) -> None:
     week_dots = ""
     main_dots = ""
 
-    for i, v in enumerate(values):
+    for i, v in enumerate(values[: last_data_index + 1]):
         if v is None:
             continue
         x = X_START + i * STEP

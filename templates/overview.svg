@@ -1,4 +1,4 @@
-<svg width="449" height="210" xmlns="http://www.w3.org/2000/svg">
+<svg width="439" height="210" xmlns="http://www.w3.org/2000/svg">
   <style>
     svg {
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -68,9 +68,9 @@
     }
   </style>
   <g>
-    <rect x="2" y="2" width="445" height="206" rx="6" ry="6" id="background" />
+    <rect x="2" y="2" width="435" height="206" rx="6" ry="6" id="background" />
     <g>
-      <foreignObject x="21" y="19" width="317" height="172">
+      <foreignObject x="21" y="19" width="308" height="172">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <table>
             <thead>

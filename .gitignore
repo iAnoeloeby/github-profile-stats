@@ -135,5 +135,6 @@ dmypy.json
 # PyCharm project files
 .idea
 
-# generated results ignore
+# generated results and cache ignore
+.cache-runtime/
 generated/
