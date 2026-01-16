@@ -161,14 +161,15 @@
 <line x1="748.0851063829788" y1="80" x2="748.0851063829788" y2="350" class="grid-week"/>
 <line x1="764.0425531914893" y1="80" x2="764.0425531914893" y2="350" class="grid-week"/>
 <line x1="780.0" y1="80" x2="780.0" y2="350" class="grid-week"/>
+<line x1="795.9574468085107" y1="80" x2="795.9574468085107" y2="350" class="grid-month"/>
 
   </g>
 
   <!-- Y AXIS LABELS -->
   <g class="y-axis-labels">
-    <text x="20" y="84.0" text-anchor="end" class="ct-label">21</text>
-<text x="20" y="138.0" text-anchor="end" class="ct-label">16</text>
-<text x="20" y="192.0" text-anchor="end" class="ct-label">12</text>
+    <text x="20" y="84.0" text-anchor="end" class="ct-label">22</text>
+<text x="20" y="138.0" text-anchor="end" class="ct-label">17</text>
+<text x="20" y="192.0" text-anchor="end" class="ct-label">13</text>
 <text x="20" y="246.0" text-anchor="end" class="ct-label">8</text>
 <text x="20" y="300.0" text-anchor="end" class="ct-label">4</text>
 <text x="20" y="354.0" text-anchor="end" class="ct-label">0</text>
