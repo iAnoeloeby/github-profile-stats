@@ -103,108 +103,108 @@
 
   <!--GRIDS-->
   <g class="grid-h-group">
-    <line x1="30" x2="780" y1="80.0" y2="80.0" class="grid-h"/>
-<line x1="30" x2="780" y1="134.0" y2="134.0" class="grid-h"/>
-<line x1="30" x2="780" y1="188.0" y2="188.0" class="grid-h"/>
-<line x1="30" x2="780" y1="242.0" y2="242.0" class="grid-h"/>
-<line x1="30" x2="780" y1="296.0" y2="296.0" class="grid-h"/>
-<line x1="30" x2="780" y1="350.0" y2="350.0" class="grid-h"/>
+    <line x1="40" x2="780" y1="80.0" y2="80.0" class="grid-h"/>
+<line x1="40" x2="780" y1="134.0" y2="134.0" class="grid-h"/>
+<line x1="40" x2="780" y1="188.0" y2="188.0" class="grid-h"/>
+<line x1="40" x2="780" y1="242.0" y2="242.0" class="grid-h"/>
+<line x1="40" x2="780" y1="296.0" y2="296.0" class="grid-h"/>
+<line x1="40" x2="780" y1="350.0" y2="350.0" class="grid-h"/>
 
   </g>
 
   <g class="grid-v-group">
-    <line x1="30.0" y1="80" x2="30.0" y2="350" class="grid-month"/>
-<line x1="45.95744680851064" y1="80" x2="45.95744680851064" y2="350" class="grid-week"/>
-<line x1="61.91489361702128" y1="80" x2="61.91489361702128" y2="350" class="grid-week"/>
-<line x1="77.87234042553192" y1="80" x2="77.87234042553192" y2="350" class="grid-week"/>
-<line x1="93.82978723404256" y1="80" x2="93.82978723404256" y2="350" class="grid-month"/>
-<line x1="109.7872340425532" y1="80" x2="109.7872340425532" y2="350" class="grid-week"/>
-<line x1="125.74468085106383" y1="80" x2="125.74468085106383" y2="350" class="grid-week"/>
-<line x1="141.70212765957447" y1="80" x2="141.70212765957447" y2="350" class="grid-week"/>
-<line x1="157.6595744680851" y1="80" x2="157.6595744680851" y2="350" class="grid-month"/>
-<line x1="173.61702127659575" y1="80" x2="173.61702127659575" y2="350" class="grid-week"/>
-<line x1="189.5744680851064" y1="80" x2="189.5744680851064" y2="350" class="grid-week"/>
-<line x1="205.53191489361703" y1="80" x2="205.53191489361703" y2="350" class="grid-week"/>
-<line x1="221.48936170212767" y1="80" x2="221.48936170212767" y2="350" class="grid-month"/>
-<line x1="237.4468085106383" y1="80" x2="237.4468085106383" y2="350" class="grid-week"/>
-<line x1="253.40425531914894" y1="80" x2="253.40425531914894" y2="350" class="grid-week"/>
-<line x1="269.36170212765956" y1="80" x2="269.36170212765956" y2="350" class="grid-week"/>
-<line x1="285.3191489361702" y1="80" x2="285.3191489361702" y2="350" class="grid-month"/>
-<line x1="301.2765957446809" y1="80" x2="301.2765957446809" y2="350" class="grid-week"/>
-<line x1="317.2340425531915" y1="80" x2="317.2340425531915" y2="350" class="grid-week"/>
-<line x1="333.1914893617021" y1="80" x2="333.1914893617021" y2="350" class="grid-week"/>
-<line x1="349.1489361702128" y1="80" x2="349.1489361702128" y2="350" class="grid-month"/>
-<line x1="365.10638297872345" y1="80" x2="365.10638297872345" y2="350" class="grid-week"/>
-<line x1="381.06382978723406" y1="80" x2="381.06382978723406" y2="350" class="grid-week"/>
-<line x1="397.02127659574467" y1="80" x2="397.02127659574467" y2="350" class="grid-week"/>
-<line x1="412.97872340425533" y1="80" x2="412.97872340425533" y2="350" class="grid-month"/>
-<line x1="428.936170212766" y1="80" x2="428.936170212766" y2="350" class="grid-week"/>
-<line x1="444.8936170212766" y1="80" x2="444.8936170212766" y2="350" class="grid-week"/>
-<line x1="460.8510638297872" y1="80" x2="460.8510638297872" y2="350" class="grid-week"/>
-<line x1="476.8085106382979" y1="80" x2="476.8085106382979" y2="350" class="grid-month"/>
-<line x1="492.76595744680856" y1="80" x2="492.76595744680856" y2="350" class="grid-week"/>
-<line x1="508.72340425531917" y1="80" x2="508.72340425531917" y2="350" class="grid-week"/>
-<line x1="524.6808510638298" y1="80" x2="524.6808510638298" y2="350" class="grid-week"/>
-<line x1="540.6382978723404" y1="80" x2="540.6382978723404" y2="350" class="grid-month"/>
-<line x1="556.5957446808511" y1="80" x2="556.5957446808511" y2="350" class="grid-week"/>
-<line x1="572.5531914893618" y1="80" x2="572.5531914893618" y2="350" class="grid-week"/>
-<line x1="588.5106382978723" y1="80" x2="588.5106382978723" y2="350" class="grid-week"/>
-<line x1="604.468085106383" y1="80" x2="604.468085106383" y2="350" class="grid-month"/>
-<line x1="620.4255319148937" y1="80" x2="620.4255319148937" y2="350" class="grid-week"/>
-<line x1="636.3829787234042" y1="80" x2="636.3829787234042" y2="350" class="grid-week"/>
-<line x1="652.3404255319149" y1="80" x2="652.3404255319149" y2="350" class="grid-week"/>
-<line x1="668.2978723404256" y1="80" x2="668.2978723404256" y2="350" class="grid-month"/>
-<line x1="684.2553191489362" y1="80" x2="684.2553191489362" y2="350" class="grid-week"/>
-<line x1="700.2127659574469" y1="80" x2="700.2127659574469" y2="350" class="grid-week"/>
-<line x1="716.1702127659574" y1="80" x2="716.1702127659574" y2="350" class="grid-week"/>
-<line x1="732.1276595744681" y1="80" x2="732.1276595744681" y2="350" class="grid-month"/>
-<line x1="748.0851063829788" y1="80" x2="748.0851063829788" y2="350" class="grid-week"/>
-<line x1="764.0425531914893" y1="80" x2="764.0425531914893" y2="350" class="grid-week"/>
+    <line x1="40.0" y1="80" x2="40.0" y2="350" class="grid-month"/>
+<line x1="55.74468085106383" y1="80" x2="55.74468085106383" y2="350" class="grid-week"/>
+<line x1="71.48936170212767" y1="80" x2="71.48936170212767" y2="350" class="grid-week"/>
+<line x1="87.23404255319149" y1="80" x2="87.23404255319149" y2="350" class="grid-week"/>
+<line x1="102.97872340425532" y1="80" x2="102.97872340425532" y2="350" class="grid-month"/>
+<line x1="118.72340425531915" y1="80" x2="118.72340425531915" y2="350" class="grid-week"/>
+<line x1="134.46808510638297" y1="80" x2="134.46808510638297" y2="350" class="grid-week"/>
+<line x1="150.2127659574468" y1="80" x2="150.2127659574468" y2="350" class="grid-week"/>
+<line x1="165.95744680851064" y1="80" x2="165.95744680851064" y2="350" class="grid-month"/>
+<line x1="181.70212765957447" y1="80" x2="181.70212765957447" y2="350" class="grid-week"/>
+<line x1="197.4468085106383" y1="80" x2="197.4468085106383" y2="350" class="grid-week"/>
+<line x1="213.19148936170214" y1="80" x2="213.19148936170214" y2="350" class="grid-week"/>
+<line x1="228.93617021276594" y1="80" x2="228.93617021276594" y2="350" class="grid-month"/>
+<line x1="244.68085106382978" y1="80" x2="244.68085106382978" y2="350" class="grid-week"/>
+<line x1="260.4255319148936" y1="80" x2="260.4255319148936" y2="350" class="grid-week"/>
+<line x1="276.17021276595744" y1="80" x2="276.17021276595744" y2="350" class="grid-week"/>
+<line x1="291.9148936170213" y1="80" x2="291.9148936170213" y2="350" class="grid-month"/>
+<line x1="307.6595744680851" y1="80" x2="307.6595744680851" y2="350" class="grid-week"/>
+<line x1="323.40425531914894" y1="80" x2="323.40425531914894" y2="350" class="grid-week"/>
+<line x1="339.1489361702128" y1="80" x2="339.1489361702128" y2="350" class="grid-week"/>
+<line x1="354.8936170212766" y1="80" x2="354.8936170212766" y2="350" class="grid-month"/>
+<line x1="370.63829787234044" y1="80" x2="370.63829787234044" y2="350" class="grid-week"/>
+<line x1="386.3829787234043" y1="80" x2="386.3829787234043" y2="350" class="grid-week"/>
+<line x1="402.1276595744681" y1="80" x2="402.1276595744681" y2="350" class="grid-week"/>
+<line x1="417.8723404255319" y1="80" x2="417.8723404255319" y2="350" class="grid-month"/>
+<line x1="433.6170212765957" y1="80" x2="433.6170212765957" y2="350" class="grid-week"/>
+<line x1="449.36170212765956" y1="80" x2="449.36170212765956" y2="350" class="grid-week"/>
+<line x1="465.1063829787234" y1="80" x2="465.1063829787234" y2="350" class="grid-week"/>
+<line x1="480.8510638297872" y1="80" x2="480.8510638297872" y2="350" class="grid-month"/>
+<line x1="496.59574468085106" y1="80" x2="496.59574468085106" y2="350" class="grid-week"/>
+<line x1="512.3404255319149" y1="80" x2="512.3404255319149" y2="350" class="grid-week"/>
+<line x1="528.0851063829787" y1="80" x2="528.0851063829787" y2="350" class="grid-week"/>
+<line x1="543.8297872340426" y1="80" x2="543.8297872340426" y2="350" class="grid-month"/>
+<line x1="559.5744680851063" y1="80" x2="559.5744680851063" y2="350" class="grid-week"/>
+<line x1="575.3191489361702" y1="80" x2="575.3191489361702" y2="350" class="grid-week"/>
+<line x1="591.063829787234" y1="80" x2="591.063829787234" y2="350" class="grid-week"/>
+<line x1="606.8085106382979" y1="80" x2="606.8085106382979" y2="350" class="grid-month"/>
+<line x1="622.5531914893617" y1="80" x2="622.5531914893617" y2="350" class="grid-week"/>
+<line x1="638.2978723404256" y1="80" x2="638.2978723404256" y2="350" class="grid-week"/>
+<line x1="654.0425531914893" y1="80" x2="654.0425531914893" y2="350" class="grid-week"/>
+<line x1="669.7872340425532" y1="80" x2="669.7872340425532" y2="350" class="grid-month"/>
+<line x1="685.531914893617" y1="80" x2="685.531914893617" y2="350" class="grid-week"/>
+<line x1="701.2765957446809" y1="80" x2="701.2765957446809" y2="350" class="grid-week"/>
+<line x1="717.0212765957447" y1="80" x2="717.0212765957447" y2="350" class="grid-week"/>
+<line x1="732.7659574468086" y1="80" x2="732.7659574468086" y2="350" class="grid-month"/>
+<line x1="748.5106382978723" y1="80" x2="748.5106382978723" y2="350" class="grid-week"/>
+<line x1="764.2553191489362" y1="80" x2="764.2553191489362" y2="350" class="grid-week"/>
 <line x1="780.0" y1="80" x2="780.0" y2="350" class="grid-week"/>
-<line x1="795.9574468085107" y1="80" x2="795.9574468085107" y2="350" class="grid-month"/>
+<line x1="780" y1="80" x2="780" y2="350" class="grid-month"/>
 
   </g>
 
   <!-- Y AXIS LABELS -->
   <g class="y-axis-labels">
-    <text x="20" y="84.0" text-anchor="end" class="ct-label">22</text>
-<text x="20" y="138.0" text-anchor="end" class="ct-label">17</text>
-<text x="20" y="192.0" text-anchor="end" class="ct-label">13</text>
-<text x="20" y="246.0" text-anchor="end" class="ct-label">8</text>
-<text x="20" y="300.0" text-anchor="end" class="ct-label">4</text>
-<text x="20" y="354.0" text-anchor="end" class="ct-label">0</text>
+    <text x="30" y="84.0" text-anchor="end" class="ct-label">23</text>
+<text x="30" y="138.0" text-anchor="end" class="ct-label">18</text>
+<text x="30" y="192.0" text-anchor="end" class="ct-label">13</text>
+<text x="30" y="246.0" text-anchor="end" class="ct-label">9</text>
+<text x="30" y="300.0" text-anchor="end" class="ct-label">4</text>
+<text x="30" y="354.0" text-anchor="end" class="ct-label">0</text>
 
   </g>
 
   <!--MONTH LABEL-->
   <g>
-    <text x="61.91489361702128" y="372" text-anchor="middle" class="ct-label">Jan</text>
-<text x="125.74468085106383" y="372" text-anchor="middle" class="ct-label">Feb</text>
-<text x="189.5744680851064" y="372" text-anchor="middle" class="ct-label">Mar</text>
-<text x="253.40425531914894" y="372" text-anchor="middle" class="ct-label">Apr</text>
-<text x="317.2340425531915" y="372" text-anchor="middle" class="ct-label">May</text>
-<text x="381.06382978723406" y="372" text-anchor="middle" class="ct-label">Jun</text>
-<text x="444.8936170212766" y="372" text-anchor="middle" class="ct-label">Jul</text>
-<text x="508.72340425531917" y="372" text-anchor="middle" class="ct-label">Aug</text>
-<text x="572.5531914893618" y="372" text-anchor="middle" class="ct-label">Sep</text>
-<text x="636.3829787234042" y="372" text-anchor="middle" class="ct-label">Oct</text>
-<text x="700.2127659574469" y="372" text-anchor="middle" class="ct-label">Nov</text>
-<text x="764.0425531914893" y="372" text-anchor="middle" class="ct-label">Dec</text>
+    <text x="71.48936170212767" y="372" text-anchor="middle" class="ct-label">Jan</text>
+<text x="134.46808510638297" y="372" text-anchor="middle" class="ct-label">Feb</text>
+<text x="197.4468085106383" y="372" text-anchor="middle" class="ct-label">Mar</text>
+<text x="260.4255319148936" y="372" text-anchor="middle" class="ct-label">Apr</text>
+<text x="323.40425531914894" y="372" text-anchor="middle" class="ct-label">May</text>
+<text x="386.3829787234043" y="372" text-anchor="middle" class="ct-label">Jun</text>
+<text x="449.36170212765956" y="372" text-anchor="middle" class="ct-label">Jul</text>
+<text x="512.3404255319149" y="372" text-anchor="middle" class="ct-label">Aug</text>
+<text x="575.3191489361702" y="372" text-anchor="middle" class="ct-label">Sep</text>
+<text x="638.2978723404256" y="372" text-anchor="middle" class="ct-label">Oct</text>
+<text x="701.2765957446809" y="372" text-anchor="middle" class="ct-label">Nov</text>
+<text x="764.2553191489362" y="372" text-anchor="middle" class="ct-label">Dec</text>
 
   </g>
 
   <!--LINE-->
-  <path class="ct-line" pathLength="1" d="M30.0,350.0C37.97872340425532,350.0,37.97872340425532,80.0,45.95744680851064,80.0" />
+  <path class="ct-line" pathLength="1" d="M40.0,350.0C47.87234042553192,350.0,47.87234042553192,80.0,55.74468085106383,80.0" />
 
   <!-- WEEK DOTS -->
   <g>
-    <line x1="30.0" y1="350.0" x2="30.01" y2="350.0" class="ct-point-week"/>
-<line x1="45.95744680851064" y1="80.0" x2="45.96744680851064" y2="80.0" class="ct-point-week"/>
+    <line x1="40.0" y1="350.0" x2="40.01" y2="350.0" class="ct-point-week"/>
+<line x1="55.74468085106383" y1="80.0" x2="55.75468085106383" y2="80.0" class="ct-point-week"/>
 
   </g>
   <!-- MAIN DOTS -->
   <g>
-    <line x1="45.95744680851064" y1="80.0" x2="45.96744680851064" y2="80.0" class="ct-point-main"/>
+    <line x1="55.74468085106383" y1="80.0" x2="55.75468085106383" y2="80.0" class="ct-point-main"/>
 
   </g>
 </svg>
