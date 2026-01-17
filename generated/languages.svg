@@ -96,7 +96,7 @@
 
           <div>
             <span class="progress">
-              <span style="background-color: #f1e05a;width: 69.221%;" class="progress-item"></span><span style="background-color: #3572A5;width: 11.172%;" class="progress-item"></span><span style="background-color: #e34c26;width: 11.154%;" class="progress-item"></span><span style="background-color: #663399;width: 3.957%;" class="progress-item"></span><span style="background-color: #dea584;width: 3.939%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.557%;" class="progress-item"></span>
+              <span style="background-color: #f1e05a;width: 69.227%;" class="progress-item"></span><span style="background-color: #3572A5;width: 11.164%;" class="progress-item"></span><span style="background-color: #e34c26;width: 11.155%;" class="progress-item"></span><span style="background-color: #663399;width: 3.958%;" class="progress-item"></span><span style="background-color: #dea584;width: 3.939%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.557%;" class="progress-item"></span>
             </span>
           </div>
 
@@ -108,7 +108,7 @@
                 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
                 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
                 <span class="lang">JavaScript</span>
-                <span class="percent">69.22%</span>
+                <span class="percent">69.23%</span>
                 </li>
             
                 <li style="animation-delay: 150ms;">
@@ -116,7 +116,7 @@
                 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
                 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
                 <span class="lang">Python</span>
-                <span class="percent">11.17%</span>
+                <span class="percent">11.16%</span>
                 </li>
             
                 <li style="animation-delay: 300ms;">
