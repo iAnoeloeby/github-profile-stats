@@ -128,15 +128,15 @@
             <li style="animation-delay:0ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/github-profile-stats</span>
+                    <span class="text">iAnoeloeby/iAnoeloeby</span>
                     <span class="badge">latest</span>
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: move cache-driven stats logic into Stats domain</span>
+                        <span class="commit-msg">docs: begin the prologue</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 16 Jan 2026, 07:58 UTC
+                            by iAnoeloeby &#8226; 22 Jan 2026, 08:58 UTC
                         </span>
                     </div>
                 </div>
