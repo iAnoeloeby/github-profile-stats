@@ -142,23 +142,6 @@
                 </div>
             </li>
             
-            <li style="animation-delay:150ms">
-                <div class="repo">
-                    <span class="dot"></span>
-                    <span class="text">iAnoeloeby/iAnoeloeby</span>
-                    
-                </div>
-                <div class="commit">
-                    <span class="child-line"></span>
-                    <div>
-                        <span class="commit-msg">docs: begin the prologue</span>
-                        <span class="meta">
-                            by iAnoeloeby &#8226; 22 Jan 2026, 08:58 UTC
-                        </span>
-                    </div>
-                </div>
-            </li>
-            
 
       </ul>
 
