@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile,web): align notification provider, popup, and toast</span>
+                        <span class="commit-msg">refactor(web): update notification UI  and improve notification provider with logging</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 09 Mar 2026, 23:50 UTC
+                            by iAnoeloeby &#8226; 12 Mar 2026, 21:24 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">chore(mobile): restructure system navigation and providers</span>
+                        <span class="commit-msg">fix(mobile): fix android notification issue and update notification UI</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Mar 2026, 18:23 UTC
+                            by iAnoeloeby &#8226; 12 Mar 2026, 16:34 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): restructure system navigation and providers</span>
+                        <span class="commit-msg">fix(mobile): fix android notification issue and update notification UI</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Mar 2026, 18:23 UTC
+                            by iAnoeloeby &#8226; 12 Mar 2026, 16:34 UTC
                         </span>
                     </div>
                 </div>
