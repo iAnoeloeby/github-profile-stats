@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(web): update notification UI  and improve notification provider with logging</span>
+                        <span class="commit-msg">feat(mobile): add reusable button components with tailwind merge utility</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Mar 2026, 21:24 UTC
+                            by iAnoeloeby &#8226; 14 Mar 2026, 21:19 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): fix android notification issue and update notification UI</span>
+                        <span class="commit-msg">feat(mobile): add Screen layout system</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Mar 2026, 16:34 UTC
+                            by iAnoeloeby &#8226; 14 Mar 2026, 19:13 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): fix android notification issue and update notification UI</span>
+                        <span class="commit-msg">refactor(web): update notification UI  and improve notification provider with logging</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Mar 2026, 16:34 UTC
+                            by iAnoeloeby &#8226; 12 Mar 2026, 21:24 UTC
                         </span>
                     </div>
                 </div>
