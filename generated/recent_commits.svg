@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): handle auth init promise without void and add error fallback</span>
+                        <span class="commit-msg">refactor(mobile): reorganize utils modules & update home screen UI</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 16 Mar 2026, 19:23 UTC
+                            by iAnoeloeby &#8226; 17 Mar 2026, 20:52 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): remove old Screen layout duplicate</span>
+                        <span class="commit-msg">feat(mobile): add format utilities for file size and timestamp</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 16 Mar 2026, 15:01 UTC
+                            by iAnoeloeby &#8226; 17 Mar 2026, 14:48 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add reusable screen header, icon button, and menu popup</span>
+                        <span class="commit-msg">fix(mobile): handle auth init promise without void and add error fallback</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 15 Mar 2026, 14:58 UTC
+                            by iAnoeloeby &#8226; 16 Mar 2026, 19:23 UTC
                         </span>
                     </div>
                 </div>
