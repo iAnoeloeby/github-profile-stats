@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add profile and history screens with dialog notifications and fallback components</span>
+                        <span class="commit-msg">feat(mobile): replace FileViewer with zoomable ImageViewer</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Mar 2026, 20:45 UTC
+                            by iAnoeloeby &#8226; 29 Mar 2026, 09:49 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): apply safe area provider and adjust base screen styling</span>
+                        <span class="commit-msg">feat(mobile): replace FileViewer with zoomable ImageViewer</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Mar 2026, 19:22 UTC
+                            by iAnoeloeby &#8226; 29 Mar 2026, 09:49 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): reorganize utils modules & update home screen UI</span>
+                        <span class="commit-msg">feat(mobile): replace FileViewer with zoomable ImageViewer</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 17 Mar 2026, 20:52 UTC
+                            by iAnoeloeby &#8226; 29 Mar 2026, 09:49 UTC
                         </span>
                     </div>
                 </div>
