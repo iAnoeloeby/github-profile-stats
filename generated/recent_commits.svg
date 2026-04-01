@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(ui): add BaseIcon and standardize button icon rendering across button variants</span>
+                        <span class="commit-msg">feat(mobile): update profile screen layout and add profile route</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 30 Mar 2026, 12:48 UTC
+                            by iAnoeloeby &#8226; 31 Mar 2026, 18:57 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add document viewer with pdf bundler and android packaging support</span>
+                        <span class="commit-msg">feat(mobile): update profile screen layout and add profile route</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 30 Mar 2026, 11:43 UTC
+                            by iAnoeloeby &#8226; 31 Mar 2026, 18:57 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): replace FileViewer with zoomable ImageViewer</span>
+                        <span class="commit-msg">refactor(mobile): align private navigator initial routes and move options at screen options.</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 29 Mar 2026, 09:49 UTC
+                            by iAnoeloeby &#8226; 31 Mar 2026, 18:52 UTC
                         </span>
                     </div>
                 </div>
