@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): update profile screen layout and add profile route</span>
+                        <span class="commit-msg">feat(mobile): add fullscreen preview component and integrate with PreviewDetail</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 31 Mar 2026, 18:57 UTC
+                            by iAnoeloeby &#8226; 02 Apr 2026, 01:58 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): update profile screen layout and add profile route</span>
+                        <span class="commit-msg">feat(mobile): add PreviewDetail component and export in preview index</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 31 Mar 2026, 18:57 UTC
+                            by iAnoeloeby &#8226; 02 Apr 2026, 01:37 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): align private navigator initial routes and move options at screen options.</span>
+                        <span class="commit-msg">feat(mobile): update profile screen layout and add profile route</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 31 Mar 2026, 18:52 UTC
+                            by iAnoeloeby &#8226; 31 Mar 2026, 18:57 UTC
                         </span>
                     </div>
                 </div>
