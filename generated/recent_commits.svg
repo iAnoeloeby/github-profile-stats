@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add DataScreen with preview detail integration</span>
+                        <span class="commit-msg">feat(ui): add reusable stepper bar component</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Apr 2026, 17:50 UTC
+                            by iAnoeloeby &#8226; 04 Apr 2026, 21:09 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add SearchBar component</span>
+                        <span class="commit-msg">feat(mobile): add reusable input component styles</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Apr 2026, 17:18 UTC
+                            by iAnoeloeby &#8226; 04 Apr 2026, 17:30 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): handle varied image sources in preview fullscreen</span>
+                        <span class="commit-msg">feat(mobile): add DataScreen with preview detail integration</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Apr 2026, 16:53 UTC
+                            by iAnoeloeby &#8226; 03 Apr 2026, 17:50 UTC
                         </span>
                     </div>
                 </div>
