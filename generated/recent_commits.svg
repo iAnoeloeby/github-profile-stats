@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add formatter for ijazah storage path filename</span>
+                        <span class="commit-msg">refactor(mobile): update DataScreen formatting and asset mapping</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 05 Apr 2026, 11:00 UTC
+                            by iAnoeloeby &#8226; 07 Apr 2026, 18:21 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(ui): add reusable stepper bar component</span>
+                        <span class="commit-msg">feat(mobile): add jenjang formatter and asset resolver</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 04 Apr 2026, 21:09 UTC
+                            by iAnoeloeby &#8226; 07 Apr 2026, 18:03 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add reusable input component styles</span>
+                        <span class="commit-msg">feat(mobile): add formatter for ijazah storage path filename</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 04 Apr 2026, 17:30 UTC
+                            by iAnoeloeby &#8226; 05 Apr 2026, 11:00 UTC
                         </span>
                     </div>
                 </div>
