@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): refactor loading animation with react-native animated</span>
+                        <span class="commit-msg">refactor(mobile): update navigation labels and clean up unused screens</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 10 Apr 2026, 16:02 UTC
+                            by iAnoeloeby &#8226; 13 Apr 2026, 21:58 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add EncryptionScreen and integrate as upload tab navigation</span>
+                        <span class="commit-msg">refactor(mobile): refactor loading animation with react-native animated</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 10 Apr 2026, 14:32 UTC
+                            by iAnoeloeby &#8226; 10 Apr 2026, 16:02 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): update DataScreen formatting and asset mapping</span>
+                        <span class="commit-msg">feat(mobile): add EncryptionScreen and integrate as upload tab navigation</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Apr 2026, 18:21 UTC
+                            by iAnoeloeby &#8226; 10 Apr 2026, 14:32 UTC
                         </span>
                     </div>
                 </div>
