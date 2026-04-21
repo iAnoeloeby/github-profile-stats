@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(web): reorganize index.css into tailwind base/components layers</span>
+                        <span class="commit-msg">feat(web): add app theme tokens with header and card styles</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 19 Apr 2026, 12:22 UTC
+                            by iAnoeloeby &#8226; 20 Apr 2026, 19:18 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add tailwind-merge helper utils</span>
+                        <span class="commit-msg">refactor(web): centralize layout and ui barrel imports</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 18 Apr 2026, 15:28 UTC
+                            by iAnoeloeby &#8226; 20 Apr 2026, 16:41 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add centralized theme init/hook utilities and path aliases</span>
+                        <span class="commit-msg">feat(web): add reusable screen layout components</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 18 Apr 2026, 11:03 UTC
+                            by iAnoeloeby &#8226; 20 Apr 2026, 16:22 UTC
                         </span>
                     </div>
                 </div>
