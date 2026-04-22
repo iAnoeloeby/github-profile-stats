@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add app theme tokens with header and card styles</span>
+                        <span class="commit-msg">feat(web): add image assets and assets alias</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Apr 2026, 19:18 UTC
+                            by iAnoeloeby &#8226; 21 Apr 2026, 17:03 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(web): centralize layout and ui barrel imports</span>
+                        <span class="commit-msg">feat(ui): add button component system with variants</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Apr 2026, 16:41 UTC
+                            by iAnoeloeby &#8226; 21 Apr 2026, 05:48 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add reusable screen layout components</span>
+                        <span class="commit-msg">feat(ui): add button component system with variants</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Apr 2026, 16:22 UTC
+                            by iAnoeloeby &#8226; 21 Apr 2026, 05:48 UTC
                         </span>
                     </div>
                 </div>
