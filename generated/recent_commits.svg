@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add image assets and assets alias</span>
+                        <span class="commit-msg">chore(web): add format utilities</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 21 Apr 2026, 17:03 UTC
+                            by iAnoeloeby &#8226; 23 Apr 2026, 07:24 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(ui): add button component system with variants</span>
+                        <span class="commit-msg">feat(web): add image assets and assets alias</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 21 Apr 2026, 05:48 UTC
+                            by iAnoeloeby &#8226; 21 Apr 2026, 17:03 UTC
                         </span>
                     </div>
                 </div>
