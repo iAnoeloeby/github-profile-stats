@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add accessRequest status and years options list utilizations</span>
+                        <span class="commit-msg">refactor(web): restructure not found screen component</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 01 May 2026, 03:57 UTC
+                            by iAnoeloeby &#8226; 02 May 2026, 02:35 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add EncryptionScreen for files</span>
+                        <span class="commit-msg">refactor(web): move dashboard navbar user lookup to parent</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 30 Apr 2026, 19:40 UTC
+                            by iAnoeloeby &#8226; 02 May 2026, 02:22 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web): add Stepper Bar reusable component</span>
+                        <span class="commit-msg">refactor(web): make ToastVariant internal and split imports</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 30 Apr 2026, 19:25 UTC
+                            by iAnoeloeby &#8226; 02 May 2026, 02:14 UTC
                         </span>
                     </div>
                 </div>
