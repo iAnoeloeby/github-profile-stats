@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(mobile): resolve NativeWind paths from project root</span>
+                        <span class="commit-msg">refactor(mobile): move DataScreen into ijazah folder</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 06 May 2026, 10:10 UTC
+                            by iAnoeloeby &#8226; 07 May 2026, 14:21 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): replace utils barrel with utils.ts</span>
+                        <span class="commit-msg">refactor(mobile): move DataScreen into ijazah folder</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 05 May 2026, 05:03 UTC
+                            by iAnoeloeby &#8226; 07 May 2026, 14:21 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add crypto identity builder</span>
+                        <span class="commit-msg">refactor(mobile): update react navigation helper</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 05 May 2026, 05:00 UTC
+                            by iAnoeloeby &#8226; 07 May 2026, 14:16 UTC
                         </span>
                     </div>
                 </div>
