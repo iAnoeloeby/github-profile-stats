@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(shared): add EncryptResult meta for capture process timestamp</span>
+                        <span class="commit-msg">refactor(web): update LoginScreen with login validation</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 08 May 2026, 18:50 UTC
+                            by iAnoeloeby &#8226; 09 May 2026, 11:34 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(mobile): add RegisterScreen for mobile user registration</span>
+                        <span class="commit-msg">refactor(web): update LoginScreen with login validation</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 08 May 2026, 18:45 UTC
+                            by iAnoeloeby &#8226; 09 May 2026, 11:34 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): update LoginScreen with Validation</span>
+                        <span class="commit-msg">refactor(web): update LoginScreen with login validation</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 08 May 2026, 18:40 UTC
+                            by iAnoeloeby &#8226; 09 May 2026, 11:34 UTC
                         </span>
                     </div>
                 </div>
