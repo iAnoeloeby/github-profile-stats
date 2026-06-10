@@ -128,15 +128,15 @@
             <li style="animation-delay:0ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/diplomine-workspaces</span>
+                    <span class="text">iAnoeloeby/sp-manager</span>
                     <span class="badge">latest</span>
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(mobile): cange date time picker deps and simplify Input components</span>
+                        <span class="commit-msg">feat: initial commit</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 21 May 2026, 13:12 UTC
+                            by iAnoeloeby &#8226; 09 Jun 2026, 17:02 UTC
                         </span>
                     </div>
                 </div>
@@ -145,15 +145,15 @@
             <li style="animation-delay:150ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/diplomine-workspaces</span>
+                    <span class="text">iAnoeloeby/sp-manager</span>
                     
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">update(web & mobile): make cleaning code from debugging</span>
+                        <span class="commit-msg">feat: initial commit</span>
                         <span class="meta">
-                            by WAW1311 &#8226; 19 May 2026, 23:01 UTC
+                            by iAnoeloeby &#8226; 09 Jun 2026, 17:02 UTC
                         </span>
                     </div>
                 </div>
@@ -162,15 +162,15 @@
             <li style="animation-delay:300ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/diplomine-workspaces</span>
+                    <span class="text">iAnoeloeby/sp-manager</span>
                     
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">update(web & mobile): cleaning code from debbuging</span>
+                        <span class="commit-msg">Merge branch 'main' of https://github.com/iAnoeloeby/sp-manager</span>
                         <span class="meta">
-                            by WAW1311 &#8226; 19 May 2026, 17:31 UTC
+                            by iAnoeloeby &#8226; 09 Jun 2026, 17:05 UTC
                         </span>
                     </div>
                 </div>

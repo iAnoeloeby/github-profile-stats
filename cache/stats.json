@@ -3,11 +3,11 @@
   "updated_at": "2026-01-16T08:34:39.180676Z",
   "recent_commits": {
     "fingerprints": [
-      "iAnoeloeby/diplomine-workspaces@1fb1ffc",
-      "iAnoeloeby/diplomine-workspaces@ba40205",
-      "iAnoeloeby/diplomine-workspaces@5913e4b"
+      "iAnoeloeby/sp-manager@a62adab",
+      "iAnoeloeby/sp-manager@b89fe2e",
+      "iAnoeloeby/sp-manager@3d0ce0a"
     ],
-    "last_checked": "2026-05-22T04:24:25.061784Z"
+    "last_checked": "2026-06-10T04:41:35.548001Z"
   },
   "lines_changed": {
     "additions": 1785365,
