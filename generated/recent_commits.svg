@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: initial commit</span>
+                        <span class="commit-msg">refactor: replace button with component variant styles</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 09 Jun 2026, 17:02 UTC
+                            by iAnoeloeby &#8226; 12 Jun 2026, 01:23 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: initial commit</span>
+                        <span class="commit-msg">chore: add shadcn for ui components</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 09 Jun 2026, 17:02 UTC
+                            by iAnoeloeby &#8226; 11 Jun 2026, 18:38 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">Merge branch 'main' of https://github.com/iAnoeloeby/sp-manager</span>
+                        <span class="commit-msg">feat: stylize default theme variant</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 09 Jun 2026, 17:05 UTC
+                            by iAnoeloeby &#8226; 11 Jun 2026, 18:15 UTC
                         </span>
                     </div>
                 </div>
