@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: change base main card layout</span>
+                        <span class="commit-msg">fix: add type-safe on dialog components</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Jun 2026, 18:11 UTC
+                            by iAnoeloeby &#8226; 13 Jun 2026, 18:10 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add dialog and popover components</span>
+                        <span class="commit-msg">feat: add base layout structure</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Jun 2026, 17:35 UTC
+                            by iAnoeloeby &#8226; 13 Jun 2026, 18:01 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: replace card component style</span>
+                        <span class="commit-msg">refactor: replace shortcut widget component</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 12 Jun 2026, 17:33 UTC
+                            by iAnoeloeby &#8226; 13 Jun 2026, 17:58 UTC
                         </span>
                     </div>
                 </div>
