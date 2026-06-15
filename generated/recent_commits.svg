@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix: add type-safe on dialog components</span>
+                        <span class="commit-msg">chore: update deps version</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 13 Jun 2026, 18:10 UTC
+                            by iAnoeloeby &#8226; 14 Jun 2026, 17:43 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add base layout structure</span>
+                        <span class="commit-msg">refactor: update new architecture & data schema</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 13 Jun 2026, 18:01 UTC
+                            by iAnoeloeby &#8226; 14 Jun 2026, 09:01 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: replace shortcut widget component</span>
+                        <span class="commit-msg">feat: add dock items for dock rail & bottom layout</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 13 Jun 2026, 17:58 UTC
+                            by iAnoeloeby &#8226; 14 Jun 2026, 08:59 UTC
                         </span>
                     </div>
                 </div>
