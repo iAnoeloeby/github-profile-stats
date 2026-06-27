@@ -3,11 +3,11 @@
   "updated_at": "2026-01-16T08:34:39.180676Z",
   "recent_commits": {
     "fingerprints": [
-      "iAnoeloeby/sp-manager@549431b",
-      "iAnoeloeby/sp-manager@1d232c4",
-      "iAnoeloeby/sp-manager@4cc7ed3"
+      "iAnoeloeby/medanjaya-desa-app@5bd5d36",
+      "iAnoeloeby/sp-manager@67c527c",
+      "iAnoeloeby/sp-manager@3956a9a"
     ],
-    "last_checked": "2026-06-26T04:36:07.255614Z"
+    "last_checked": "2026-06-27T04:12:37.722709Z"
   },
   "lines_changed": {
     "additions": 1785365,

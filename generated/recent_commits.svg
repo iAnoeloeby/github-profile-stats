@@ -128,15 +128,15 @@
             <li style="animation-delay:0ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/sp-manager</span>
+                    <span class="text">iAnoeloeby/medanjaya-desa-app</span>
                     <span class="badge">latest</span>
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add weather widget components</span>
+                        <span class="commit-msg">feat: Initial commit</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 26 Jun 2026, 03:36 UTC
+                            by anoeloeby &#8226; 26 Jun 2026, 07:30 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add scoreboard widget components</span>
+                        <span class="commit-msg">feat: add quick context navigation for development</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 26 Jun 2026, 03:32 UTC
+                            by iAnoeloeby &#8226; 26 Jun 2026, 06:15 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix: update alias path import</span>
+                        <span class="commit-msg">fix: update registry alias path import</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 24 Jun 2026, 20:26 UTC
+                            by iAnoeloeby &#8226; 26 Jun 2026, 06:14 UTC
                         </span>
                     </div>
                 </div>
