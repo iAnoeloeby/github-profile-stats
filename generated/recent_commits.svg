@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: Initial commit</span>
+                        <span class="commit-msg">feat: add shadcn base components</span>
                         <span class="meta">
-                            by anoeloeby &#8226; 26 Jun 2026, 07:30 UTC
+                            by iAnoeloeby &#8226; 30 Jun 2026, 22:57 UTC
                         </span>
                     </div>
                 </div>
@@ -145,15 +145,15 @@
             <li style="animation-delay:150ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/sp-manager</span>
+                    <span class="text">iAnoeloeby/medanjaya-desa-app</span>
                     
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add quick context navigation for development</span>
+                        <span class="commit-msg">feat: Initial commit</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 26 Jun 2026, 06:15 UTC
+                            by anoeloeby &#8226; 26 Jun 2026, 07:30 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix: update registry alias path import</span>
+                        <span class="commit-msg">feat: add quick context navigation for development</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 26 Jun 2026, 06:14 UTC
+                            by iAnoeloeby &#8226; 26 Jun 2026, 06:15 UTC
                         </span>
                     </div>
                 </div>
