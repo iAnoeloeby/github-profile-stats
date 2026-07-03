@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add shadcn base components</span>
+                        <span class="commit-msg">feat: update fronted base landing page</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 30 Jun 2026, 22:57 UTC
+                            by iAnoeloeby &#8226; 03 Jul 2026, 01:43 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: Initial commit</span>
+                        <span class="commit-msg">feat: add layout content wrap</span>
                         <span class="meta">
-                            by anoeloeby &#8226; 26 Jun 2026, 07:30 UTC
+                            by iAnoeloeby &#8226; 03 Jul 2026, 00:21 UTC
                         </span>
                     </div>
                 </div>
@@ -162,15 +162,15 @@
             <li style="animation-delay:300ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/sp-manager</span>
+                    <span class="text">iAnoeloeby/medanjaya-desa-app</span>
                     
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add quick context navigation for development</span>
+                        <span class="commit-msg">feat: add layout content wrap</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 26 Jun 2026, 06:15 UTC
+                            by iAnoeloeby &#8226; 03 Jul 2026, 00:21 UTC
                         </span>
                     </div>
                 </div>
