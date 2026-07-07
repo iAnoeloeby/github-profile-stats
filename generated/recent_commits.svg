@@ -128,15 +128,15 @@
             <li style="animation-delay:0ms">
                 <div class="repo">
                     <span class="dot"></span>
-                    <span class="text">iAnoeloeby/medanjaya-desa-app</span>
+                    <span class="text">iAnoeloeby/site</span>
                     <span class="badge">latest</span>
                 </div>
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: update fronted base landing page</span>
+                        <span class="commit-msg">feat: Initial commit</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Jul 2026, 01:43 UTC
+                            by anoeloeby &#8226; 06 Jul 2026, 21:32 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add layout content wrap</span>
+                        <span class="commit-msg">feat: update fronted base landing page</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Jul 2026, 00:21 UTC
+                            by iAnoeloeby &#8226; 03 Jul 2026, 01:43 UTC
                         </span>
                     </div>
                 </div>
