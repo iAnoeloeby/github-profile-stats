@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: replace organization data structure & services</span>
+                        <span class="commit-msg">feat: add news content layout</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 28 Jul 2026, 07:50 UTC
+                            by iAnoeloeby &#8226; 30 Jul 2026, 20:04 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add badge section</span>
+                        <span class="commit-msg">feat: add main content styles on pages</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 28 Jul 2026, 07:40 UTC
+                            by iAnoeloeby &#8226; 30 Jul 2026, 18:01 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: refactor container base layout & page wrapped content</span>
+                        <span class="commit-msg">feat: component formatting process</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 28 Jul 2026, 07:29 UTC
+                            by iAnoeloeby &#8226; 30 Jul 2026, 17:55 UTC
                         </span>
                     </div>
                 </div>
