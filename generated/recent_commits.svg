@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix: update specific component import path</span>
+                        <span class="commit-msg">feat(layout): add customizable header info props</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 01 Aug 2026, 16:22 UTC
+                            by iAnoeloeby &#8226; 03 Aug 2026, 17:38 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: move landing shared to centralized components</span>
+                        <span class="commit-msg">fix: update specific component import path</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 01 Aug 2026, 16:19 UTC
+                            by iAnoeloeby &#8226; 01 Aug 2026, 16:22 UTC
                         </span>
                     </div>
                 </div>
