@@ -125,9 +125,22 @@
       <ul>
 
         
-            <text x="50%" y="50%" text-anchor="middle" class="text">
-            No recent commits yet.
-            </text>
+            <li style="animation-delay:0ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/tv-channel-manager</span>
+                    <span class="badge">latest</span>
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">feat: initial commit</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 14 Sep 2026, 09:05 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
             
 
       </ul>
