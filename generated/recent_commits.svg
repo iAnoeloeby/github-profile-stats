@@ -134,9 +134,43 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: initial commit</span>
+                        <span class="commit-msg">feat: add dashboard channels ui layout</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 14 Sep 2026, 09:05 UTC
+                            by iAnoeloeby &#8226; 22 Sep 2026, 04:38 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <li style="animation-delay:150ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/tv-channel-manager</span>
+                    
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">feat: add playlist generator & routes</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 22 Sep 2026, 04:36 UTC
+                        </span>
+                    </div>
+                </div>
+            </li>
+            
+            <li style="animation-delay:300ms">
+                <div class="repo">
+                    <span class="dot"></span>
+                    <span class="text">iAnoeloeby/tv-channel-manager</span>
+                    
+                </div>
+                <div class="commit">
+                    <span class="child-line"></span>
+                    <div>
+                        <span class="commit-msg">feat: add playlist generator & routes</span>
+                        <span class="meta">
+                            by iAnoeloeby &#8226; 22 Sep 2026, 04:36 UTC
                         </span>
                     </div>
                 </div>
