@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add dashboard channels ui layout</span>
+                        <span class="commit-msg">fix: add web better experience configuration</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 22 Sep 2026, 04:38 UTC
+                            by iAnoeloeby &#8226; 22 Sep 2026, 18:34 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add playlist generator & routes</span>
+                        <span class="commit-msg">refactor: integrate scheduled worker to build channel playlist</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 22 Sep 2026, 04:36 UTC
+                            by iAnoeloeby &#8226; 22 Sep 2026, 14:46 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add playlist generator & routes</span>
+                        <span class="commit-msg">refactor: update Supabase client initialization to use env variables</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 22 Sep 2026, 04:36 UTC
+                            by iAnoeloeby &#8226; 22 Sep 2026, 16:11 UTC
                         </span>
                     </div>
                 </div>
