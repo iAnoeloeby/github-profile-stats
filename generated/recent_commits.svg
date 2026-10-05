@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add channel order persistence contracts system</span>
+                        <span class="commit-msg">feat(channels): add channel order persistence contracts system</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Oct 2026, 02:17 UTC
+                            by iAnoeloeby &#8226; 03 Oct 2026, 02:12 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix(parser): preserve arbitrary M3U entry metadata</span>
+                        <span class="commit-msg">feat: add channel order persistence contracts system</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 03 Oct 2026, 00:43 UTC
+                            by iAnoeloeby &#8226; 03 Oct 2026, 02:17 UTC
                         </span>
                     </div>
                 </div>
