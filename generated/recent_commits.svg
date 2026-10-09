@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">fix: update article frontend data services & type definitions</span>
+                        <span class="commit-msg">refactor: use gallery card for specific landing gallery section</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Oct 2026, 09:59 UTC
+                            by iAnoeloeby &#8226; 07 Oct 2026, 09:57 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: update article data contract and services</span>
+                        <span class="commit-msg">fix: update gallery frontend data services & type definitions</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Oct 2026, 09:58 UTC
+                            by iAnoeloeby &#8226; 07 Oct 2026, 09:56 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor(pejabat): restructure data structure and services</span>
+                        <span class="commit-msg">refactor: update gallery data contract and services</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 07 Oct 2026, 08:43 UTC
+                            by iAnoeloeby &#8226; 07 Oct 2026, 09:53 UTC
                         </span>
                     </div>
                 </div>
