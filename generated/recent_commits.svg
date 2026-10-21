@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add ProfilePage UI & TerritorialMap component base</span>
+                        <span class="commit-msg">feat: update ProfilPage content</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 19 Oct 2026, 20:36 UTC
+                            by iAnoeloeby &#8226; 20 Oct 2026, 09:16 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add ContentHero components</span>
+                        <span class="commit-msg">feat: add ContentHeroEyebrow component to ContentHero01</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 19 Oct 2026, 20:33 UTC
+                            by iAnoeloeby &#8226; 20 Oct 2026, 08:47 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: implement structure view with compact and detail tabs for Pejabat data</span>
+                        <span class="commit-msg">feat: improve ContentHero component with Skeleton</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 17 Oct 2026, 14:50 UTC
+                            by iAnoeloeby &#8226; 20 Oct 2026, 08:44 UTC
                         </span>
                     </div>
                 </div>
