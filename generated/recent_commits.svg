@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add organization content & initial structure with loading state components</span>
+                        <span class="commit-msg">feat: add Laporan APBDesa page and table view components</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 21 Oct 2026, 09:47 UTC
+                            by iAnoeloeby &#8226; 23 Oct 2026, 03:02 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add PerangkatDesa page UI with loading state components</span>
+                        <span class="commit-msg">feat: add statistik services for fetching & normalizing statistics data</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Oct 2026, 10:23 UTC
+                            by iAnoeloeby &#8226; 23 Oct 2026, 02:55 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: update ProfilPage content</span>
+                        <span class="commit-msg">feat: add APBDesa services for fetching & normalizing data schema</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 20 Oct 2026, 09:16 UTC
+                            by iAnoeloeby &#8226; 23 Oct 2026, 03:01 UTC
                         </span>
                     </div>
                 </div>
