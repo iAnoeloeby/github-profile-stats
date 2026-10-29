@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">refactor: update navigation-menu refs support and customizable viewport properties</span>
+                        <span class="commit-msg">feat: update header & footer navigation schema</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 27 Oct 2026, 07:45 UTC
+                            by iAnoeloeby &#8226; 28 Oct 2026, 10:06 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add pelayanan services for fetching & managing service data</span>
+                        <span class="commit-msg">refactor: update navigation-menu refs support and customizable viewport properties</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 27 Oct 2026, 00:01 UTC
+                            by iAnoeloeby &#8226; 27 Oct 2026, 07:45 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat: add Pelayanan Page with renderer ListView components & Detail Page content</span>
+                        <span class="commit-msg">feat: add pelayanan services for fetching & managing service data</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 27 Oct 2026, 00:11 UTC
+                            by iAnoeloeby &#8226; 27 Oct 2026, 00:01 UTC
                         </span>
                     </div>
                 </div>
