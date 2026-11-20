@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">Merge pull request #22 from iAnoeloeby/web-public/feat/profile-page</span>
+                        <span class="commit-msg">feat(web-public/program-page/program-paket-a): add Paket A program page</span>
                         <span class="meta">
-                            by anoeloeby &#8226; 10 Nov 2026, 13:08 UTC
+                            by iAnoeloeby &#8226; 18 Nov 2026, 10:26 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web-public/profile-page): add program information</span>
+                        <span class="commit-msg">Merge pull request #22 from iAnoeloeby/web-public/feat/profile-page</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 10 Nov 2026, 12:42 UTC
+                            by anoeloeby &#8226; 10 Nov 2026, 13:08 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web-public/profile-page): add profile page</span>
+                        <span class="commit-msg">feat(web-public/profile-page): add program information</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 10 Nov 2026, 12:26 UTC
+                            by iAnoeloeby &#8226; 10 Nov 2026, 12:42 UTC
                         </span>
                     </div>
                 </div>
