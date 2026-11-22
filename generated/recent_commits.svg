@@ -134,9 +134,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web-public/program-page): implement program page (#29)</span>
+                        <span class="commit-msg">feat(web-public/program-page/program-paket-b): add Paket B program page</span>
                         <span class="meta">
-                            by anoeloeby &#8226; 21 Nov 2026, 06:11 UTC
+                            by iAnoeloeby &#8226; 21 Nov 2026, 04:33 UTC
                         </span>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web-public/program-page/program-paket-c): add Paket C program page</span>
+                        <span class="commit-msg">feat(web-public/program-page): implement program page (#29)</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 21 Nov 2026, 04:35 UTC
+                            by anoeloeby &#8226; 21 Nov 2026, 06:11 UTC
                         </span>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                 <div class="commit">
                     <span class="child-line"></span>
                     <div>
-                        <span class="commit-msg">feat(web-public/program-page/program-paket-a): add Paket A program page</span>
+                        <span class="commit-msg">feat(web-public/program-page/program-paket-c): add Paket C program page</span>
                         <span class="meta">
-                            by iAnoeloeby &#8226; 18 Nov 2026, 10:26 UTC
+                            by iAnoeloeby &#8226; 21 Nov 2026, 04:35 UTC
                         </span>
                     </div>
                 </div>
